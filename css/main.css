@@ -1,0 +1,93 @@
+
+.section {
+  height: 100vh !important;
+  background-color: white;
+  font-family: sans-serif;
+  text-align: justify;
+}
+.fadeIn{
+	opacity:0;
+}
+
+.transition, .footer{
+  height: 50vh !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('file:///Users/ibrahimirfan/Desktop/bridgeday/img/bridgeTeam.jpg') no-repeat center center fixed;
+}
+/*'*/
+.second{
+  margin-top: 100vh;
+}
+
+.overlay, .fullscreen-bg {
+    position: absolute;;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.overlay {
+    z-index: -90;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) no-repeat center center fixed;
+}
+
+.title {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    position: absolute;;
+    height: 10vh;
+    top: 40vh;
+    width: 100%;
+    margin: auto;
+}
+
+.fullscreen-bg {
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#downArrowWrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.subTitle{
+  font-weight: 600;
+  padding-top: 7.5vh;
+  font-size: 40px;
+  color: red;
+  text-align: center;
+  position: relative;
+}
+
+#reg{
+  padding-top:5vh;
+}
+
+.select-style {
+position: relative;
+    font-size: 14px;
+    -webkit-appearance: menulist-button;
+    height: 30px;
+    width: 500px;
+}
+
+.mdl-textfield, .mdl-radio{
+  margin-right: 2.5% !important;
+  margin-left: 2.5% !important;
+}
