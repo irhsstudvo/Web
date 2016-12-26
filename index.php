@@ -1,4 +1,47 @@
-<!DOCTYPE HTML>
+
+<?php
+ob_start();
+session_start();
+require_once 'dbconnect.php';
+
+if(isset($_POST['submit'])) {
+
+ $email = strip_tags(trim($_POST['email']));
+ $fname = strip_tags(trim($_POST['firstname']));
+ $lname = strip_tags(trim($_POST['lastname']));
+ $school = strip_tags(trim($_POST['school']));
+ $medInfo = strip_tags(trim($_POST['medInfo']));
+ $emgContact = strip_tags(trim($_POST['emgContact']));
+ $emgPhone = strip_tags(trim($_POST['emgPhone']));
+ $learnQ = strip_tags(trim($_POST['learnQ']));
+ $gender = $_POST['gender'];
+
+ $error = false;
+
+ if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($medInfo) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender)){
+   $error = true;
+   $errMSG = "You must complete all fields.";
+ }
+
+//TODO
+ if (false){
+      $error = true;
+      $errMSG = "Workshop choices must be different";
+  }
+
+//todo: change false to !$error
+ if (false) {
+    $query = "INSERT INTO users(userFName, userLName, userEmail) VALUES('$fname', '$lname', '$email')";
+    $res = mysql_query($query);
+
+    if ($res) {
+      $errMSG = "Successfully registered!";
+    }
+}
+}
+
+?>
+
 
 <html>
 
@@ -58,7 +101,7 @@
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="school" name="school">
-                <label class="mdl-textfield__label" for="email">School</label>
+                <label class="mdl-textfield__label" for="school">School</label>
             </div>
 
             <!-- -->  </br>
@@ -66,11 +109,11 @@
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
-                <label class="mdl-textfield__label" for="email">Medical Information</label>
+                <label class="mdl-textfield__label" for="medInfo">Medical Information</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="emgContact" name="emgContact">
-                <label class="mdl-textfield__label" for="email">Emergency Contact Name</label>
+                <label class="mdl-textfield__label" for="emgContact">Emergency Contact Name</label>
             </div>
 
             <!-- -->  </br>
@@ -78,7 +121,7 @@
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
-                <label class="mdl-textfield__label" for="email">Emergency Contact Phone Number</label>
+                <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone Number</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
@@ -88,11 +131,11 @@
             </br>
             </br>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-1">
-                <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                <input type="radio" id="option-1" class="mdl-radio__button" name="gender" value="M">
                 <span class="mdl-radio__label">Male</span>
             </label>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-2">
-                <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                <input type="radio" id="option-2" class="mdl-radio__button" name="gender" value="F">
                 <span class="mdl-radio__label">Female</span>
             </label>
 
@@ -129,12 +172,11 @@
     </div>
 
     <div class="footer">
+      <?php echo $errMSG; ?>
     </div>
 
     <script type="text/javascript" src="js/jquery-latest.min.js"></script>
-
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 
