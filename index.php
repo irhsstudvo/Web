@@ -14,24 +14,28 @@ if(isset($_POST['submit'])) {
  $emgContact = strip_tags(trim($_POST['emgContact']));
  $emgPhone = strip_tags(trim($_POST['emgPhone']));
  $learnQ = strip_tags(trim($_POST['learnQ']));
+ $w1 = strip_tags(trim($_POST['work1']));
+ $w2 = strip_tags(trim($_POST['work2']));
+ $w3 = strip_tags(trim($_POST['work3']));
  $gender = $_POST['gender'];
 
+ if ($medInfo == ""){
+   $medInfo = "None";
+ }
  $error = false;
 
- if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($medInfo) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender)){
+ if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender)){
    $error = true;
    $errMSG = "You must complete all fields.";
  }
 
-//TODO
- if (false){
+ if ($w1 == $w2 || $w2 == $w3 || $w3 == $w1){
       $error = true;
       $errMSG = "Workshop choices must be different";
   }
 
-//todo: change false to !$error
- if (false) {
-    $query = "INSERT INTO users(userFName, userLName, userEmail) VALUES('$fname', '$lname', '$email')";
+ if (!$error) {
+    $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, userWorkshop1, userWorkshop2, userWorkshop3, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$w1', '$w2', '$w3', '$learnQ')";
     $res = mysql_query($query);
 
     if ($res) {
@@ -55,7 +59,7 @@ if(isset($_POST['submit'])) {
 
 <body>
     <div class="fullscreen-bg">
-        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        <video loop muted autoplay poster="img/videoframe.png" class="fullscreen-bg__video">
             <source src="video/bridgeday2016.mp4" type="video/mp4">
         </video>
     </div>
@@ -109,7 +113,7 @@ if(isset($_POST['submit'])) {
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
-                <label class="mdl-textfield__label" for="medInfo">Medical Information</label>
+                <label class="mdl-textfield__label" for="medInfo">Medical Information (optional)</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
                 <input class="mdl-textfield__input" type="text" id="emgContact" name="emgContact">
@@ -139,12 +143,19 @@ if(isset($_POST['submit'])) {
                 <span class="mdl-radio__label">Female</span>
             </label>
 
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-3">
+                <input type="radio" id="option-3" class="mdl-radio__button" name="gender" value="O">
+                <span class="mdl-radio__label">Other</span>
+            </label>
+
             </br>
             </br>
 
             <select id="work1" name="work1" class="select-style fadeIn">
                 <option value="" disabled selected>1st Choice Workshop</option>
-
+                <option value="1a">Ex Workshop 1a</option>
+                <option value="1b">Ex Workshop 1b</option>
+                <option value="1c">Ex Workshop 1c</option>
             </select>
 
             <br/>
@@ -152,14 +163,18 @@ if(isset($_POST['submit'])) {
 
             <select id="work2" name="work2" class="select-style fadeIn">
                 <option value="" disabled selected>2nd Choice Workshop</option>
-
+                <option value="2a">Ex Workshop 2a</option>
+                <option value="2b">Ex Workshop 2b</option>
+                <option value="2c">Ex Workshop 2c</option>
             </select>
             <br/>
             <br/>
 
             <select id="work3" name="work3" class="select-style fadeIn">
                 <option value="" disabled selected>3rd Choice Workshop</option>
-
+                <option value="3a">Ex Workshop 3a</option>
+                <option value="3b">Ex Workshop 3b</option>
+                <option value="3c">Ex Workshop 3c</option>
             </select>
             </br>
             <br>
