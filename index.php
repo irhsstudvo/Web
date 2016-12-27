@@ -68,7 +68,9 @@ if(isset($_POST['submit'])) {
         <div class="title fadeIn">IRHS BRIDGEDAY <span style="color: red;">2017</span></div>
         <div id="downArrowWrapper">
             <center>
-                <img id="downArrow" src="img/icons/whiteArrow.png">
+                  <div>
+                <figcaption>Learn More</figcaption>
+                <img id="downArrow" src="img/icons/whiteArrow.png"></div>
             </center>
         </div>
     </div>
@@ -191,6 +193,7 @@ if(isset($_POST['submit'])) {
     </div>
 
     <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+        <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
 </body>

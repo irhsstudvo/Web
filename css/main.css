@@ -1,3 +1,10 @@
+::selection {
+  background: #FF9A9A !important; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #FF9A9A !important; /* Gecko Browsers */
+}
+
 .fullscreen-bg {
     position: fixed;
     top: 0;
@@ -67,7 +74,7 @@ body, html{
 
 .overlay {
     z-index: -90;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)) no-repeat center center fixed;
 }
 
 .title {
@@ -89,6 +96,9 @@ body, html{
     left: 0;
     right: 0;
     bottom: 0;
+}
+#downArrowWrapper:hover{
+  cursor: pointer;
 }
 
 .subTitle{
@@ -115,4 +125,9 @@ position: relative;
 .mdl-textfield, .mdl-radio{
   margin-right: 2.5% !important;
   margin-left: 2.5% !important;
+}
+
+figcaption{
+  font-size: 25px;
+  color: white;
 }

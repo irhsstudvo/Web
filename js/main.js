@@ -47,14 +47,16 @@ $(document).on("ready", function() {
 
 
     // red arrow on hover, else white
-    $('#downArrow').hover(function() {
-        fadeImage($(this), 150, 'img/icons/redArrow.png');
+    $('#downArrowWrapper').hover(function() {
+        fadeImage($('#downArrow'), 150, 'img/icons/redArrow.png');
+        $('figcaption').animate({ color: "red" }, 300);
     }, function() {
-        fadeImage($(this), 150, 'img/icons/whiteArrow.png');
+        fadeImage($('#downArrow'), 150, 'img/icons/whiteArrow.png');
+        $('figcaption').animate({ color: "white" }, 300);
     });
 
     // scroll to second section if arrow clicked
-    $('#downArrow').on("click", function() {
+    $('#downArrowWrapper').on("click", function() {
         scrollToAnchor($('.second'));
     });
 });
