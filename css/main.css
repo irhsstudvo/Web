@@ -109,6 +109,13 @@ body, html{
   text-align: center;
   position: relative;
 }
+#errorMSG{
+  padding-top: 5vh;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: -5vh;
+}
 
 #reg{
   padding-top:5vh;

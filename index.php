@@ -84,7 +84,10 @@ if(isset($_POST['submit'])) {
 
     <div class="section">
         <div class="subTitle fadeIn">Register for BridgeDay 2017</div>
-
+        <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
+          <?php
+          echo $errMSG;
+         ?></div>
         <center>
 
         <form id="reg" method='post'>
