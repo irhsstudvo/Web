@@ -18,7 +18,7 @@ require_once 'dbconnect.php';
 </head>
 
 <body>
-  <table cellpadding="5"><thead>
+  <table cellpadding="5" border="3"><thead>
     <tr><td>User ID</td>
 <td>First</td>
 <td>Last</td>

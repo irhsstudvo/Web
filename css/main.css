@@ -138,3 +138,8 @@ figcaption{
   font-size: 25px;
   color: white;
 }
+
+thead tr td{
+  background-color: #FF9A9A;
+  font-weight: bold;
+}
