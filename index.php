@@ -24,15 +24,15 @@ if(isset($_POST['submit'])) {
  }
  $error = false;
 
+  if ($w1 == $w2 || $w2 == $w3 || $w3 == $w1){
+       $error = true;
+       $errMSG = "Workshop choices must be different";
+   }
  if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender)){
    $error = true;
    $errMSG = "You must complete all fields.";
  }
 
- if ($w1 == $w2 || $w2 == $w3 || $w3 == $w1){
-      $error = true;
-      $errMSG = "Workshop choices must be different";
-  }
 
  if (!$error) {
     $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, userWorkshop1, userWorkshop2, userWorkshop3, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$w1', '$w2', '$w3', '$learnQ')";
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
 <head>
     <title>BridgeDay 2017</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"></link>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-pink.min.css" />
 </head>
@@ -65,7 +65,8 @@ if(isset($_POST['submit'])) {
     </div>
 
     <div class="overlay">
-        <div class="title fadeIn">IRHS BRIDGEDAY <span style="color: red;">2017</span></div>
+        <div class="title fadeIn">IRHS BRIDGEDAY<br>
+        <div class="dateText">April 6, 2017</div></div>
         <div id="downArrowWrapper">
             <center>
                   <div>
@@ -83,7 +84,7 @@ if(isset($_POST['submit'])) {
     </div>
 
     <div class="section">
-        <div class="subTitle fadeIn">Register for BridgeDay 2017</div>
+        <div class="subTitle fadeIn">Register for BridgeDay</div>
         <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
           <?php
           echo $errMSG;
@@ -192,7 +193,6 @@ if(isset($_POST['submit'])) {
     </div>
 
     <div class="footer">
-      <?php echo $errMSG; ?>
     </div>
 
     <script type="text/javascript" src="js/jquery-latest.min.js"></script>

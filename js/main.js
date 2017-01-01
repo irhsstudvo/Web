@@ -2,7 +2,7 @@ $(document).on("ready", function() {
     /*           */
     /* FUNCTIONS */
     /*           */
-
+    
     //scroll to anchor
     function scrollToAnchor(tag) {
         $('html,body').animate({
@@ -44,7 +44,6 @@ $(document).on("ready", function() {
     $(window).scroll(function() {
         checkFadeIn();
     });
-
 
     // red arrow on hover, else white
     $('#downArrowWrapper').hover(function() {

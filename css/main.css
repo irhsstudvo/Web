@@ -29,13 +29,29 @@
 	    transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
+/* Mobile CSS */
+@media screen and (max-width: 700px) {
     .fullscreen-bg {
         background: url('http://bridgeday.000webhostapp.com/img/videoframe.png') center center / cover no-repeat;
     }
 
     .fullscreen-bg__video {
         display: none;
+    }
+
+    .subTitle{
+      font-size: 30px !important;
+    }
+    .title{
+      font-size: 60px !important;
+      top: 35vh !important;
+    }
+    .dateText{
+      font-size: 30px !important;
+    }
+
+    .select-style {
+        width: 90% !important;
     }
 }
 
@@ -53,7 +69,7 @@ body, html{
 	opacity:0;
 }
 
-.transition, .footer{
+.transition{
   height: 50vh !important;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -64,10 +80,10 @@ body, html{
 }
 /*'*/
 .footer{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed;
+  background-color: white;
+  height: 100vh;
 }
 
-/*'*/
 .second{
   margin-top: 100vh;
 }
@@ -79,16 +95,21 @@ body, html{
 
 .title {
     color: white;
+    line-height: 1em;
     font-size: 100px;
     text-align: center;
     font-family: sans-serif;
     font-weight: 600;
-    position: absolute;;
+    position: absolute;
     height: 10vh;
     top: 40vh;
     width: 100%;
     margin: auto;
-    word-wrap: break-word;
+}
+
+.dateText {
+  color: red;
+  font-size: 40px;
 }
 
 #downArrowWrapper {
@@ -103,12 +124,15 @@ body, html{
 
 .subTitle{
   font-weight: 600;
+  line-height: 1em;
   padding-top: 7.5vh;
   font-size: 40px;
   color: red;
   text-align: center;
   position: relative;
 }
+
+
 #errorMSG{
   padding-top: 5vh;
   font-size: 20px;
