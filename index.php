@@ -59,6 +59,7 @@ if(isset($_POST['submit'])) {
 
 <body>
     <div class="fullscreen-bg">
+      <div id="fadeBG"></div>
         <video loop muted autoplay poster="img/videoframe.png" class="fullscreen-bg__video">
             <source src="video/bridgeday2016.mp4" type="video/mp4">
         </video>
@@ -88,7 +89,7 @@ if(isset($_POST['submit'])) {
         <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
           <?php
           echo $errMSG;
-         ?></div>
+         ?></div> 
         <center>
 
         <form id="reg" method='post'>
