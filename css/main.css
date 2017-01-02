@@ -5,6 +5,11 @@
   background: #FF9A9A !important; /* Gecko Browsers */
 }
 
+@font-face {
+    font-family: cool;
+    src: url('/css/coolvetica.ttf');
+}
+
 #fadeBG{
   opacity: 0.5;
   background-color: black;
@@ -38,6 +43,22 @@
 	    transform: translate(-50%, -50%);
 }
 
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*'*/
 /* Mobile CSS */
 @media screen and (max-width: 700px) {
     .fullscreen-bg {
@@ -71,7 +92,7 @@ body, html{
 .section {
   height: 100vh !important;
   background-color: white;
-  font-family: sans-serif;
+  font-family: cool;
   text-align: justify;
 }
 .fadeIn{
@@ -84,14 +105,8 @@ body, html{
   background-repeat: no-repeat;
 }
 
-.transition{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed;
-}
 /*'*/
-.footer{
-  background-color: white;
-  height: 100vh;
-}
+
 
 .second{
   margin-top: 100vh;
@@ -107,7 +122,7 @@ body, html{
     line-height: 1em;
     font-size: 100px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: cool;
     font-weight: 600;
     position: absolute;
     height: 10vh;
@@ -156,23 +171,30 @@ body, html{
 
 .select-style {
 position: relative;
-    font-size: 14px;
+    font-size: 20px;
     -webkit-appearance: menulist-button;
-    height: 30px;
-    width: 500px;
+    height: 35px;
+    width: 600px;
+    font-family: cool;
 }
 
 .mdl-textfield, .mdl-radio{
   margin-right: 2.5% !important;
   margin-left: 2.5% !important;
+  font-size: 20px !important;
 }
 
 figcaption{
   font-size: 25px;
   color: white;
+  font-family: cool;
 }
 
 thead tr td{
   background-color: #FF9A9A;
   font-weight: bold;
+}
+
+.mdl-textfield__label{
+  font-size: 20px !important;
 }

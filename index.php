@@ -89,7 +89,7 @@ if(isset($_POST['submit'])) {
         <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
           <?php
           echo $errMSG;
-         ?></div> 
+         ?></div>
         <center>
 
         <form id="reg" method='post'>
@@ -193,8 +193,7 @@ if(isset($_POST['submit'])) {
       </center>
     </div>
 
-    <div class="footer">
-    </div>
+  
 
     <script type="text/javascript" src="js/jquery-latest.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
