@@ -77,14 +77,14 @@ if(isset($_POST['submit'])) {
         </div>
     </div>
 
-    <div class="section second">
+    <div class="second">
         <div class="subTitle fadeIn">What is BridgeDay?</div>
     </div>
 
     <div class="transition">
     </div>
 
-    <div class="section">
+    <div class="third">
         <div class="subTitle fadeIn">Register for BridgeDay</div>
         <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
           <?php
@@ -193,7 +193,7 @@ if(isset($_POST['submit'])) {
       </center>
     </div>
 
-  
+
 
     <script type="text/javascript" src="js/jquery-latest.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>

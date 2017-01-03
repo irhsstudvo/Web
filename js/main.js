@@ -41,16 +41,16 @@ $(document).on("ready", function() {
 
     function removeBG() {
         var height = $(".fullscreen-bg").outerHeight(); //gets height of header
-        var transitionTop = $('body:before').offset().top;
-
+        var transitionTop = $('.transition').offset().top;
+        //scroll past video
         if ($(window).scrollTop() > height) {
             $(".fullscreen-bg").hide();
         } else {
             $(".fullscreen-bg").show();
         }
-
+        //Scroll past transition
         if ($(window).scrollTop() > (height + transitionTop)){
-          $('body:before').css('background', 'none');
+          $('body:before').css('background', 'none !important');
         }else{
             $('body:before').css('background', "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed");
         }

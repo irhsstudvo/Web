@@ -89,8 +89,10 @@ body:before {
 body, html{
   margin: 0 !important;
 }
-.section {
+.second {
   height: 100vh !important;
+}
+.second, .third{
   background-color: white;
   font-family: cool;
   text-align: justify;
@@ -101,12 +103,7 @@ body, html{
 
 .transition{
   height: 50vh !important;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
-
-/*'*/
-
 
 .second{
   margin-top: 100vh;
@@ -166,7 +163,8 @@ body, html{
 }
 
 #reg{
-  padding-top:5vh;
+  padding-bottom: 5vh;
+  margin-bottom: -5vh;
 }
 
 .select-style {
