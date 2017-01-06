@@ -118,6 +118,10 @@ body, html{
 #downArrowWrapper:hover{
   cursor: pointer;
 }
+#downArrow{
+  width: 64px;
+  height: 64px;
+}
 
 .subTitle{
   font-weight: 600;

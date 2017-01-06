@@ -10,14 +10,6 @@ $(document).on("ready", function() {
         }, 1000);
     }
 
-    // fade an image out and fade in a new image
-    function fadeImage(item, delay, imgPath) {
-        item.fadeOut(delay, function() {
-            item.attr('src', imgPath);
-            item.fadeIn(delay);
-        });
-    }
-
     // move slightly up while fading into view
     function fadeInAnimation(elem) {
         elem.css("top", "+=30px");
@@ -70,15 +62,11 @@ $(document).on("ready", function() {
 
     // red arrow and text on hover, else white
     $('#downArrowWrapper').hover(function() {
-        fadeImage($('#downArrow'), 150, 'img/icons/redArrow.png');
-        $('figcaption').animate({
-            color: "red"
-        }, 300);
+        $('#downArrow g path').css("fill", "red");
+        $('figcaption').css("color", "red");
     }, function() {
-        fadeImage($('#downArrow'), 150, 'img/icons/whiteArrow.png');
-        $('figcaption').animate({
-            color: "white"
-        }, 300);
+        $('#downArrow g path').css("fill", "white");
+        $('figcaption').css("color", "white");
     });
 
     // scroll to second section if arrow clicked
