@@ -27,6 +27,7 @@ $(document).on("ready", function() {
         }, 1000);
     }
 
+    //fade in object if scrolled to
     function checkFadeIn() {
         $('.fadeIn').each(function(i) {
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -39,8 +40,9 @@ $(document).on("ready", function() {
         });
     }
 
+    //remove background on scroll to prevent overlap
     function removeBG() {
-        var height = $(".fullscreen-bg").outerHeight(); //gets height of header
+        var height = $(".fullscreen-bg").outerHeight();
         var transitionTop = $('.transition').offset().top;
         //scroll past video
         if ($(window).scrollTop() > height) {
@@ -48,22 +50,25 @@ $(document).on("ready", function() {
         } else {
             $(".fullscreen-bg").show();
         }
-        //Scroll past transition
-        if ($(window).scrollTop() > (height + transitionTop)){
-          $('body:before').css('background', 'none !important');
-        }else{
+        //scroll past transition
+        if ($(window).scrollTop() > (height + transitionTop)) {
+            $('body:before').css('background', 'none !important');
+        } else {
             $('body:before').css('background', "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed");
         }
     }
 
+    /*            */
+    /*    MAIN    */
+    /*            */
     checkFadeIn();
-    // on window scroll, fade item if in view
+    // on window scroll, fade item if in view and remove background if passed
     $(window).scroll(function() {
         checkFadeIn();
         removeBG();
     });
 
-    // red arrow on hover, else white
+    // red arrow and text on hover, else white
     $('#downArrowWrapper').hover(function() {
         fadeImage($('#downArrow'), 150, 'img/icons/redArrow.png');
         $('figcaption').animate({

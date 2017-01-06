@@ -50,7 +50,7 @@ if(isset($_POST['submit'])) {
 <html>
 
 <head>
-    <title>BridgeDay 2017</title>
+    <title>BRidgeDay 2017</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
     </div>
 
     <div class="overlay">
-        <div class="title fadeIn">IRHS BRIDGEDAY<br>
+        <div class="title fadeIn">IRHS BRidgeDay<br>
         <div class="dateText">April 6, 2017</div></div>
         <div id="downArrowWrapper">
             <center>
@@ -78,14 +78,15 @@ if(isset($_POST['submit'])) {
     </div>
 
     <div class="second">
-        <div class="subTitle fadeIn">What is BridgeDay?</div>
+        <div class="subTitle fadeIn">What is BRidgeDay?</div>
+        <img id="irhsImg" src="img/irhs.png">
     </div>
 
     <div class="transition">
     </div>
 
     <div class="third">
-        <div class="subTitle fadeIn">Register for BridgeDay</div>
+        <div class="subTitle fadeIn">Register for BRidgeDay</div>
         <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
           <?php
           echo $errMSG;
