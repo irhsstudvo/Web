@@ -61,8 +61,6 @@ body:before {
 /*'*/
 body, html{
   margin: 0 !important;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 .second {
   height: 100vh !important;
@@ -181,7 +179,7 @@ thead tr td{
   position: absolute;
   width: 66%;
   bottom: 0;
-  right: -10%;
+  right: 0;
 }
 
 /* Mobile CSS */
