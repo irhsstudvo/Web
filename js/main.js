@@ -3,6 +3,16 @@ $(document).on("ready", function() {
     /* FUNCTIONS */
     /*           */
 
+    //read variable from URL
+    function getURLVar(variable) {
+        var query = window.location.href;
+        if (query.indexOf(variable) == -1){
+          return false;
+        }else{
+          return query[query.indexOf(variable) + variable.length + 1];
+        }
+    }
+
     //scroll to anchor
     function scrollToAnchor(tag) {
         $('html,body').animate({
@@ -50,10 +60,29 @@ $(document).on("ready", function() {
         }
     }
 
+    // check if the user entered from a form submit
+    function checkFormSubmit() {
+        var errCode = getURLVar("error");
+        if (errCode !== false) {
+            if (errCode == "0") {
+                $('#errorMSG').css("color", "green");
+                $('#errorMSG').html('Successfully registered.');
+            } else if (errCode == "1") {
+                $('#errorMSG').css("color", "red");
+                $('#errorMSG').html('You must complete all fields.');
+            } else if (errCode == "2") {
+                $('#errorMSG').css("color", "red");
+                $('#errorMSG').html('Workshop choices must be different.');
+            }
+        }
+    }
+
     /*            */
     /*    MAIN    */
     /*            */
     checkFadeIn();
+    checkFormSubmit();
+
     // on window scroll, fade item if in view and remove background if passed
     $(window).scroll(function() {
         checkFadeIn();

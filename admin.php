@@ -11,7 +11,7 @@ require_once 'dbconnect.php';
 
 <body>
   <?php
-  $query = "SELECT * FROM users";
+  $query = "SELECT userId, userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, userWorkshop1, lunch, userWorkshop2, userQResponse, timeEntered FROM users";
 
   $res = mysql_query($query);
 
@@ -40,12 +40,12 @@ require_once 'dbconnect.php';
      echo "NEWFIELD";
   echo $entry["userQResponse"];
   echo "NEWFIELD";
+echo $entry["lunch"];
+echo "NEWFIELD";
      echo $entry["userWorkshop1"];
      echo "NEWFIELD";
        echo $entry["userWorkshop2"];
        echo "NEWFIELD";
-     echo $entry["userWorkshop3"];
-     echo "NEWFIELD";
      echo $entry["timeEntered"];
      echo "NEWENTRY";
   }

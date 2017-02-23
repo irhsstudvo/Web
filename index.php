@@ -4,6 +4,55 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
+$result1 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A1'");
+$count1 = mysql_num_rows($result1);
+
+$result2 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A2'");
+$count12= mysql_num_rows($result2);
+
+$result3 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A3'");
+$count3 = mysql_num_rows($result3);
+
+$result4 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A4'");
+$count4 = mysql_num_rows($result4);
+
+$result5 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A5'");
+$count5 = mysql_num_rows($result5);
+
+$result6 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A6'");
+$count6 = mysql_num_rows($result6);
+
+$result1b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B1'");
+$count1b = mysql_num_rows($result1b);
+
+$result2b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B2'");
+$count12b= mysql_num_rows($result2b);
+
+$result3b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B3'");
+$count3b = mysql_num_rows($result3b);
+
+$result4b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B4'");
+$count4b = mysql_num_rows($result4b);
+
+$result5b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B5'");
+$count5b = mysql_num_rows($result5b);
+
+$result6b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B6'");
+$count6b = mysql_num_rows($result6b);
+
+$max1 = 5;
+$max2 = 5;
+$max3 = 5;
+$max4 = 5;
+$max5 = 5;
+$max6 = 5;
+$max1b = 5;
+$max2b = 5;
+$max3b = 5;
+$max4b = 5;
+$max5b = 5;
+$max6b = 5;
+
 if(isset($_POST['submit'])) {
 
  $email = strip_tags(trim($_POST['email']));
@@ -16,36 +65,63 @@ if(isset($_POST['submit'])) {
  $learnQ = strip_tags(trim($_POST['learnQ']));
  $w1 = strip_tags(trim($_POST['work1']));
  $w2 = strip_tags(trim($_POST['work2']));
- $w3 = strip_tags(trim($_POST['work3']));
+
+ $lunch = $_POST['lunch'];
  $gender = $_POST['gender'];
+
+$lunch = ($lunch == "Y");
 
  if ($medInfo == ""){
    $medInfo = "None";
  }
  $error = false;
 
-  if ($w1 == $w2 || $w2 == $w3 || $w3 == $w1){
+  if ($w1 == $w2) {
        $error = true;
-       $errMSG = "Workshop choices must be different";
+       $errorCode = 2;
    }
- if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender)){
+ if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender)){
    $error = true;
-   $errMSG = "You must complete all fields.";
+   $errorCode = 1;
  }
 
+if (!$error) {
+   $fname = str_replace("'", "''", "$fname");
+   $fname = str_replace("\n", "", "$fname");
 
- if (!$error) {
-    $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, userWorkshop1, userWorkshop2, userWorkshop3, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$w1', '$w2', '$w3', '$learnQ')";
+   $lname = str_replace("'", "''", "$lname");
+   $lname = str_replace("\n", "", "$lname");
+
+   $email = str_replace("'", "''", "$email");
+   $email = str_replace("\n", "", "$email");
+
+   $school = str_replace("'", "''", "$school");
+   $school = str_replace("\n", "", "$school");
+
+   $medInfo = str_replace("'", "''", "$medInfo");
+   $medInfo = str_replace("\n", "", "$medInfo");
+
+   $emgContact = str_replace("'", "''", "$emgContact");
+   $emgContact = str_replace("\n", "", "$emgContact");
+
+   $emgPhone = str_replace("'", "''", "$emgPhone");
+   $emgPhone = str_replace("\n", "", "$emgPhone");
+
+   $learnQ = str_replace("'", "''", "$learnQ");
+   $learnQ = str_replace("\n", "", "$learnQ");
+
+    $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, lunch, userWorkshop1, userWorkshop2, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$lunch', '$w1', '$w2', '$learnQ')";
     $res = mysql_query($query);
 
     if ($res) {
-      $errMSG = "Successfully registered!";
+      $errorCode = 0;
     }
 }
+  header("Location: https://bridgeday.000webhostapp.com?error=".$errorCode."#reg");
+
 }
 
 ?>
-
 
 <html>
 
@@ -84,7 +160,32 @@ if(isset($_POST['submit'])) {
 
     <div class="second">
         <div class="subTitle fadeIn">What is BRidgeDay?</div>
-        <img id="irhsImg" class="fadeIn" src="img/irhs.png">
+        <div class="blurb blurb1">We are proud to present
+          <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed
+          to help Grade 8 students bridge the gap between elementary school and
+          high school. </div>
+          <div class="blurb blurb2">Students will attend
+            various workshop sessions designed to promote the wellbeing of
+            students and address key student needs in our three main pillars:
+            <span style="color: red">Relationship</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
+          <div class="blurb blurb3">
+            Students will also have the opportunity to meet current high school
+            students and teachers, as well as learn about the extracurricular
+            opportunities available at the Ridge, so that
+            these <span style="color: red">future Trailblazers</span> can become involved with our school and
+            community.</div>
+            <div class="blurb blurb4">We look forward to meeting all the grade
+              8 students who will be joining us in <span style="color: red">September 2017!</span></div>
+
+
+        <img id="irhsImg" align="right" src="img/irhs.png">
+    </div>
+
+    <div class="transition">
+    </div>
+
+    <div class="third">
+        <div class="subTitle fadeIn">More Information</div>
     </div>
 
     <div class="transition">
@@ -92,19 +193,16 @@ if(isset($_POST['submit'])) {
 
     <div class="third">
         <div class="subTitle fadeIn">Register for BRidgeDay</div>
-        <div id="errorMSG" class="fadeIn" style="color:<?php if ($error){ echo 'red'; }else{ echo 'green';} ?>;">
-          <?php
-          echo $errMSG;
-         ?></div>
+        <div id="errorMSG" class="fadeIn"></div>
         <center>
 
         <form id="reg" method='post'>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="firstname" name="firstname">
                 <label class="mdl-textfield__label" for="firstname">First Name</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="lastname" name="lastname">
                 <label class="mdl-textfield__label" for="lastname">Last Name</label>
             </div>
@@ -112,23 +210,34 @@ if(isset($_POST['submit'])) {
             <!-- -->  </br>
               </br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="email" name="email">
                 <label class="mdl-textfield__label" for="email">Email</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="school" name="school">
                 <label class="mdl-textfield__label" for="school">School</label>
             </div>
 
-            <!-- -->  </br>
-              </br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+                      </br>
+                      </br>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                          <input type="radio" id="option-1" class="mdl-radio__button" name="lunch" value="Y">
+                          <span class="mdl-radio__label">Cafeteria Option</span>
+                      </label>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                          <input type="radio" id="option-2" class="mdl-radio__button" name="lunch" value="N">
+                          <span class="mdl-radio__label">Bringing Own Lunch</span>
+                      </label>
+                      <br>
+                      <br>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
                 <label class="mdl-textfield__label" for="medInfo">Medical Information (optional)</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="emgContact" name="emgContact">
                 <label class="mdl-textfield__label" for="emgContact">Emergency Contact Name</label>
             </div>
@@ -136,64 +245,86 @@ if(isset($_POST['submit'])) {
             <!-- -->  </br>
               </br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
                 <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone Number</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label fadeIn">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
                 <label class="mdl-textfield__label" for="learnQ">What do you hope to learn?</label>
             </div>
 
             </br>
             </br>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-1">
-                <input type="radio" id="option-1" class="mdl-radio__button" name="gender" value="M">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                <input type="radio" id="option-3" class="mdl-radio__button" name="gender" value="M">
                 <span class="mdl-radio__label">Male</span>
             </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-2">
-                <input type="radio" id="option-2" class="mdl-radio__button" name="gender" value="F">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                <input type="radio" id="option-4" class="mdl-radio__button" name="gender" value="F">
                 <span class="mdl-radio__label">Female</span>
             </label>
 
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect fadeIn" for="option-3">
-                <input type="radio" id="option-3" class="mdl-radio__button" name="gender" value="O">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                <input type="radio" id="option-5" class="mdl-radio__button" name="gender" value="O">
                 <span class="mdl-radio__label">Other</span>
             </label>
 
             </br>
             </br>
 
-            <select id="work1" name="work1" class="select-style fadeIn">
-                <option value="" disabled selected>1st Choice Workshop</option>
-                <option value="1a">Ex Workshop 1a</option>
-                <option value="1b">Ex Workshop 1b</option>
-                <option value="1c">Ex Workshop 1c</option>
+            <select id="work1" name="work1" class="select-style">
+                <option value="" disabled selected>Relationship Workshop</option>
+                <?php if ($count1 < $max1){
+                echo "<option value='A1'>Make it or Break It? - Halton Women's Place</option>";
+              }
+                if ($count2 < $max2) {
+                echo "<<option value='A2'>Resisting Toxic Media - SAVIS</option>";;
+              }
+                if ($count3 < $max3) {
+                echo "<<option value='A3'>Live, Learn, Laugh - Kimberley Menezes-Francispillai</option>";
+              }
+                if ($count4 < $max4) {
+                echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Carrie Cho</option>";
+                }
+                if ($count5 < $max5) {
+                echo "<<option value='A5'>QA Thing - Ron Duberstein</option>";
+                }
+                if ($count6 < $max6) {
+                echo "<<option value='A6'>GEM Thing - Gem Club</option>";
+                } ?>
             </select>
 
             <br/>
             <br/>
 
-            <select id="work2" name="work2" class="select-style fadeIn">
-                <option value="" disabled selected>2nd Choice Workshop</option>
-                <option value="2a">Ex Workshop 2a</option>
-                <option value="2b">Ex Workshop 2b</option>
-                <option value="2c">Ex Workshop 2c</option>
+            <select id="work2" name="work2" class="select-style">
+                <option value="" disabled selected>Resilliency Workshop</option>
+                <?php if ($count1b < $max1b){
+                echo "<option value='B1'>Mirror Mirror - Halton Women's Place</option>";
+                }
+                if ($count2b < $max2b){
+                echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
+                }
+                if ($count3b < $max3b){
+                echo "<option value='B3'>Music and Mental Health - Joob Vailiki</option>";
+                }
+                if ($count4b < $max4b){
+                echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
+                }
+                if ($count5b < $max5b){
+                echo "<option value='B5'>Resolution: Confidence - Jenn Patterson</option>";
+                }
+                if ($count6b < $max6b){
+                echo "<option value='B6'>The Daring Way - Melissa Vance</option>";
+              } ?>
             </select>
-            <br/>
-            <br/>
 
-            <select id="work3" name="work3" class="select-style fadeIn">
-                <option value="" disabled selected>3rd Choice Workshop</option>
-                <option value="3a">Ex Workshop 3a</option>
-                <option value="3b">Ex Workshop 3b</option>
-                <option value="3c">Ex Workshop 3c</option>
-            </select>
             </br>
             <br>
             <br>
 
-            <input id="submit" name="submit" class="fadeIn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" type="submit" value="Register">
+            <input id="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" type="submit" value="Register">
             </input>
         </form>
       </center>

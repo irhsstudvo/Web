@@ -63,8 +63,9 @@ body, html{
   margin: 0 !important;
 }
 .second {
-  height: 100vh !important;
   position: relative;
+  text-align: right;
+  overflow: auto;
 }
 .second, .third{
   background-color: white;
@@ -176,12 +177,19 @@ thead tr td{
 }
 
 #irhsImg{
-  position: absolute;
-  width: 66%;
-  bottom: 0;
-  right: 0;
+  margin-top: 20px;
+  width: 50%;
+  min-width: 300px;
+  margin-bottom: 10px;
 }
 
+.blurb{
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 40px;
+  line-height: 1em;
+  font-size: 25px;
+}
 /* Mobile CSS */
 @media screen and (max-width: 700px) {
     .fullscreen-bg {
