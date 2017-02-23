@@ -190,6 +190,43 @@ thead tr td{
   line-height: 1em;
   font-size: 25px;
 }
+
+.titleThing{
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1em;
+}
+
+.workTitle{
+padding-top: 15px;
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: -10px;
+font-size: 20px;
+color: red;
+}
+
+.workDesc{
+  padding: 10px;
+  font-size: 15px;
+  font-family: sans-serif;
+  align-self: center;
+}
+
+.mdl-card-square{
+  height: 300px;
+}
+
+.descWrapper{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.spots{
+  padding-top: 10px;
+}
+
 /* Mobile CSS */
 @media screen and (max-width: 700px) {
     .fullscreen-bg {

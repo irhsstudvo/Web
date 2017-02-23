@@ -186,6 +186,105 @@ if (!$error) {
 
     <div class="third">
         <div class="subTitle fadeIn">More Information</div>
+    <center>
+      <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
+              <hr width="50%">
+
+    <div class="titleThing">Pillar 1 Workshops - Relationships</div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+              <div class="workTitle">Make it or Break It? - Halton Women's Place</div>
+              <div class="spots"><?php echo $max1 - $count1; ?> spots remaining</div>
+              <div class="descWrapper"><div class="workDesc">Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would we fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it 19s also good to not be in a relationship!)</div>
+            </div></div></div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Resisting Toxic Media - SAVIS
+                </div>
+                <div class="spots"><?php echo $max2 - $count2; ?> spots remaining</div>
+                <div class="descWrapper"><div class="workDesc">Gender, body, image and relationships. Examines gender steotypes and their impact on self image. Explore how this affects our relationship with ourseves and others. Explain how you can push back against toxic media messages.</div>
+              </div>
+              </div></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Live, Learn, Laugh - Kimberley Menezes-Francispillai</div>
+  <div class="spots"><?php echo $max3 - $count3; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide soem tools for coping  b) Look at ways to develop healthry relationships.  c) Address common worries that students experience when entering high school and how to change your worries into solvable issues.</div>
+</div>
+              </div></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Balancing Relationships - Betty Xiong, Carrie Cho</div>
+  <div class="spots"><?php echo $max4 - $count4; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">The workshop talks about the importance of maintaining relationship inside and outside of school, also present ways how students can balance relationships.</div>
+</div>
+              </div></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">QA Thing - Ron Duberstein</div>
+  <div class="spots"><?php echo $max6 - $count5; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">This workshop will be lead by members of the Iroquois Ridge High School Gay-Straight Alliance, otherwise known as the Q&A Club. This session will provide a safe space for any students wishing to discuss and explore a range of topics including LGBT terminology, how to create a safe space, and resources available during high school.</div>
+</div>
+              </div></div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">GEM Thing - Gem Club</div>
+  <div class="spots"><?php echo $max6 - $count6; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">This workshop aims to challenge stereotypes in a manner that educates, motivates and encourages students to dispute popular social stigmas and get involved in what they love! We will present an interactive Q&amp;A session, play team building activities and host a presentation on combating gender stereotypes in accordance with clubs, courses, and general school life.</div>
+</div>
+              </div></div>
+        </div>
+
+        <hr width="50%">
+
+        <div class="titleThing">Pillar 2 Workshops - Resilliency</div>
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                      <div class="workTitle">Mirror Mirror - Halton Women's Place</div>
+                      <div class="spots"><?php echo $max1b - $count1b; ?> spots remaining</div>
+                      <div class="descWrapper"><div class="workDesc">Mirror Mirror - Body image, self-esteem, photoshop and filters, advertising, and the impact on our mental health.</div>
+</div>
+                  </div></div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+    <div class="workTitle">Mental Health at The Ridge - Wellness Team</div>
+    <div class="spots"><?php echo $max2b - $count2b; ?> spots remaining</div>
+    <div class="descWrapper"><div class="workDesc">Ever feel stressed and don’t know how to cope? Ever wonder how to slow down your hectic life and take a break? Well you’ve come to the right place. This workshop will guide you through multiple techniques on distressing along with educating you about the multiple resources provided at the Ridge and community for your mental health support.</div>
+</div>
+                    </div></div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Music and Mental Health - Joob Vailiki</div>
+  <div class="spots"><?php echo $max3b - $count3b; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">Music and Mental Health</div>
+</div>
+                  </div></div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Break down the Roles - Red Cross Youth Facilitators</div>
+  <div class="spots"><?php echo $max4b - $count4b; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">We are bringing to light the impacts of bullying on the people involved in a bullying situation. Students will learn that they have the power to help others and create a school that is free of bullying. We have group activities in which students will be analyzing bullying scenarios and discussing as a group the feelings associated with the different roles in bullying. </div>
+</div>
+                  </div></div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">Resolution: Confidence - Jenn Patterson</div>
+  <div class="spots"><?php echo $max5b - $count5b; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">Jennifer Patterson has suffered from low self esteem for as long as she can remember.  This ultimately led to a lack of confidence and an eating disorder.  She will discuss her journey to recovery and her process of discovering that if you keep fighting you can reach a place that een you didn't think was possible.</div>
+</div>
+                  </div></div>
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+  <div class="workTitle">The Daring Way - Melissa Vance</div>
+  <div class="spots"><?php echo $max6b - $count6b; ?> spots remaining</div>
+  <div class="descWrapper"><div class="workDesc">Is fear stopping you from doing what you love? Are you worried about what others think? Is anxiety holding you back? In this workshop we will talk about shame, self-limiting beliefs, negative self-talk and behaviours that are holding us back from living our best life. You will learn how to identify your triggers and what is really happening in your body. "The most courageous thing we can do is DARE to live the life of our dreams".</div>
+</div>
+                  </div></div>
+            </div>
+
+            </center>
     </div>
 
     <div class="transition">
