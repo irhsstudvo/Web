@@ -21,22 +21,22 @@ $count5 = mysql_num_rows($result5);
 $result6 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A6'");
 $count6 = mysql_num_rows($result6);
 
-$result1b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B1'");
+$result1b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B1'");
 $count1b = mysql_num_rows($result1b);
 
-$result2b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B2'");
+$result2b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B2'");
 $count12b= mysql_num_rows($result2b);
 
-$result3b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B3'");
+$result3b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B3'");
 $count3b = mysql_num_rows($result3b);
 
-$result4b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B4'");
+$result4b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B4'");
 $count4b = mysql_num_rows($result4b);
 
-$result5b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B5'");
+$result5b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B5'");
 $count5b = mysql_num_rows($result5b);
 
-$result6b = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='B6'");
+$result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
 $count6b = mysql_num_rows($result6b);
 
 $max1 = 5;
