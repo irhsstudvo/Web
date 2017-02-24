@@ -125,7 +125,7 @@ if (!$error) {
 <html>
 
 <head>
-    <title>BRidgeDay 2017</title>
+    <title>BRidge Day 2017</title>
     <link rel="stylesheet" type="text/css" href="css/main.css"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -149,7 +149,7 @@ if (!$error) {
     </div>
 
     <div class="overlay">
-        <div class="title fadeIn">IRHS BRidgeDay
+        <div class="title fadeIn">IRHS BRidge Day
             <br>
             <div class="dateText">April 6, 2017</div>
         </div>
@@ -168,7 +168,7 @@ if (!$error) {
         </div>
 
         <div class="second">
-            <div class="subTitle fadeIn">What is BRidgeDay?</div>
+            <div class="subTitle fadeIn">What is BRidge Day?</div>
             <div class="blurb blurb1">We are proud to present
                 <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed to help Grade 8 students bridge the gap between elementary school and high school. </div>
             <div class="blurb blurb2">Students will attend various workshop sessions designed to promote the wellbeing of students and address key student needs in our three main pillars:
