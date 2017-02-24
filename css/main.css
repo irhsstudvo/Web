@@ -190,6 +190,14 @@ thead tr td{
   line-height: 1em;
   font-size: 25px;
 }
+.hs101Disclaimer{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    line-height: 1em;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
 
 .titleThing{
   font-size: 30px;
@@ -203,28 +211,26 @@ padding-top: 15px;
 padding-left: 15px;
 padding-right: 15px;
 padding-bottom: -10px;
-font-size: 20px;
+font-size: 25px;
 color: red;
+height: 37.5px;
 }
 
-.workDesc{
-  padding: 10px;
-  font-size: 15px;
-  font-family: sans-serif;
-  align-self: center;
-}
-
-.mdl-card-square{
-  height: 300px;
-}
-
-.descWrapper{
-  display: flex;
-  justify-content: center;
-  height: 100%;
+.mdl-card-square:hover{
+  cursor: pointer;
 }
 .spots{
-  padding-top: 10px;
+  padding-top: 45px;
+  font-size: 20px;
+}
+
+.fancyWorkTitle{
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.num{
+  font-size: 60px;
 }
 
 /* Mobile CSS */

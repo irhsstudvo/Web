@@ -1,4 +1,3 @@
-
 <?php
 ob_start();
 session_start();
@@ -131,250 +130,273 @@ if (!$error) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-pink.min.css" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
 </head>
 
 <body>
+    <!-- Fancybox popup -->
+    <div class="fancybox" rel="group" id="workPopup"></div>
+
     <div class="fullscreen-bg">
-      <div id="fadeBG"></div>
+        <div id="fadeBG"></div>
         <video loop muted autoplay poster="img/videoframe.png" class="fullscreen-bg__video">
             <source src="video/bridgeday2016.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="overlay">
-        <div class="title fadeIn">IRHS BRidgeDay<br>
-        <div class="dateText">April 6, 2017</div></div>
+        <div class="title fadeIn">IRHS BRidgeDay
+            <br>
+            <div class="dateText">April 6, 2017</div>
+        </div>
         <div id="downArrowWrapper">
             <center>
-                  <div>
-                <figcaption>Learn More</figcaption>
-                <?xml version="1.0" encoding="utf-8"?>
-                <svg id="downArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="512px" height="512px">
-                  <g>
-                    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#FFFFFF"/>
-                  </g>
-                </svg>
+                <div>
+                    <figcaption>Learn More</figcaption>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg id="downArrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="512px" height="512px">
+                        <g>
+                            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#FFFFFF" />
+                        </g>
+                    </svg>
             </center>
+            </div>
         </div>
-    </div>
 
-    <div class="second">
-        <div class="subTitle fadeIn">What is BRidgeDay?</div>
-        <div class="blurb blurb1">We are proud to present
-          <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed
-          to help Grade 8 students bridge the gap between elementary school and
-          high school. </div>
-          <div class="blurb blurb2">Students will attend
-            various workshop sessions designed to promote the wellbeing of
-            students and address key student needs in our three main pillars:
-            <span style="color: red">Relationship</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
-          <div class="blurb blurb3">
-            Students will also have the opportunity to meet current high school
-            students and teachers, as well as learn about the extracurricular
-            opportunities available at the Ridge, so that
-            these <span style="color: red">future Trailblazers</span> can become involved with our school and
-            community.</div>
-            <div class="blurb blurb4">We look forward to meeting all the grade
-              8 students who will be joining us in <span style="color: red">September 2017!</span></div>
+        <div class="second">
+            <div class="subTitle fadeIn">What is BRidgeDay?</div>
+            <div class="blurb blurb1">We are proud to present
+                <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed to help Grade 8 students bridge the gap between elementary school and high school. </div>
+            <div class="blurb blurb2">Students will attend various workshop sessions designed to promote the wellbeing of students and address key student needs in our three main pillars:
+                <span style="color: red">Relationship</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
+            <div class="blurb blurb3">
+                Students will also have the opportunity to meet current high school students and teachers, as well as learn about the extracurricular opportunities available at the Ridge, so that these <span style="color: red">future Trailblazers</span>                can become involved with our school and community.
+            </div>
+            <div class="blurb blurb4">We look forward to meeting all the grade 8 students who will be joining us in <span style="color: red">September 2017!</span></div>
 
 
-        <img id="irhsImg" align="right" src="img/irhs.png">
-    </div>
+            <img id="irhsImg" align="right" src="img/irhs.png">
+        </div>
 
-    <div class="transition">
-    </div>
+        <div class="transition">
+        </div>
 
-    <div class="third">
-        <div class="subTitle fadeIn">More Information</div>
-    <center>
-      <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
-              <hr width="50%">
+        <div class="third">
+            <div class="subTitle fadeIn">More Information</div>
+            <center>
+                <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
+                <hr width="50%">
 
-    <div class="titleThing">Pillar 1 Workshops - Relationships</div>
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-              <div class="workTitle">Make it or Break It? - Halton Women's Place</div>
-              <div class="spots"><?php echo $max1 - $count1; ?> spots remaining</div>
-              <div class="descWrapper"><div class="workDesc">Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would we fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it 19s also good to not be in a relationship!)</div>
-            </div></div></div>
-            <div class="mdl-cell mdl-cell--4-col">
-                <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Resisting Toxic Media - SAVIS
+                <div class="titleThing">Pillar 1 Workshops - Relationships</div>
+                <div class="mdl-grid mdl-container">
+                    <div class="mdl-cell mdl-cell--4-col" id="A1">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Make it or Break It? - Halton Women's Place</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max1 - $count1; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="A2">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Resisting Toxic Media - SAVIS
+                            </div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max2 - $count2; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="A3">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Live, Learn, Laugh - Kimberley Menezes-Francispillai</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max3 - $count3; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="A4">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Balancing Relationships - Betty Xiong, Carrie Cho</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max4 - $count4; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="A5">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">QA Thing - Ron Duberstein</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max6 - $count5; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="A6">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">GEM Thing - Gem Club</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max6 - $count6; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="spots"><?php echo $max2 - $count2; ?> spots remaining</div>
-                <div class="descWrapper"><div class="workDesc">Gender, body, image and relationships. Examines gender steotypes and their impact on self image. Explore how this affects our relationship with ourseves and others. Explain how you can push back against toxic media messages.</div>
-              </div>
-              </div></div>
-            <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Live, Learn, Laugh - Kimberley Menezes-Francispillai</div>
-  <div class="spots"><?php echo $max3 - $count3; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide soem tools for coping  b) Look at ways to develop healthry relationships.  c) Address common worries that students experience when entering high school and how to change your worries into solvable issues.</div>
-</div>
-              </div></div>
-            <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Balancing Relationships - Betty Xiong, Carrie Cho</div>
-  <div class="spots"><?php echo $max4 - $count4; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">The workshop talks about the importance of maintaining relationship inside and outside of school, also present ways how students can balance relationships.</div>
-</div>
-              </div></div>
-            <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">QA Thing - Ron Duberstein</div>
-  <div class="spots"><?php echo $max6 - $count5; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">This workshop will be lead by members of the Iroquois Ridge High School Gay-Straight Alliance, otherwise known as the Q&A Club. This session will provide a safe space for any students wishing to discuss and explore a range of topics including LGBT terminology, how to create a safe space, and resources available during high school.</div>
-</div>
-              </div></div>
-            <div class="mdl-cell mdl-cell--4-col">
-              <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">GEM Thing - Gem Club</div>
-  <div class="spots"><?php echo $max6 - $count6; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">This workshop aims to challenge stereotypes in a manner that educates, motivates and encourages students to dispute popular social stigmas and get involved in what they love! We will present an interactive Q&amp;A session, play team building activities and host a presentation on combating gender stereotypes in accordance with clubs, courses, and general school life.</div>
-</div>
-              </div></div>
-        </div>
 
-        <hr width="50%">
+                <hr width="50%">
 
-        <div class="titleThing">Pillar 2 Workshops - Resilliency</div>
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col">
-                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                      <div class="workTitle">Mirror Mirror - Halton Women's Place</div>
-                      <div class="spots"><?php echo $max1b - $count1b; ?> spots remaining</div>
-                      <div class="descWrapper"><div class="workDesc">Mirror Mirror - Body image, self-esteem, photoshop and filters, advertising, and the impact on our mental health.</div>
-</div>
-                  </div></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                    <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-    <div class="workTitle">Mental Health at The Ridge - Wellness Team</div>
-    <div class="spots"><?php echo $max2b - $count2b; ?> spots remaining</div>
-    <div class="descWrapper"><div class="workDesc">Ever feel stressed and don’t know how to cope? Ever wonder how to slow down your hectic life and take a break? Well you’ve come to the right place. This workshop will guide you through multiple techniques on distressing along with educating you about the multiple resources provided at the Ridge and community for your mental health support.</div>
-</div>
-                    </div></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Music and Mental Health - Joob Vailiki</div>
-  <div class="spots"><?php echo $max3b - $count3b; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">Music and Mental Health</div>
-</div>
-                  </div></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Break down the Roles - Red Cross Youth Facilitators</div>
-  <div class="spots"><?php echo $max4b - $count4b; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">We are bringing to light the impacts of bullying on the people involved in a bullying situation. Students will learn that they have the power to help others and create a school that is free of bullying. We have group activities in which students will be analyzing bullying scenarios and discussing as a group the feelings associated with the different roles in bullying. </div>
-</div>
-                  </div></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">Resolution: Confidence - Jenn Patterson</div>
-  <div class="spots"><?php echo $max5b - $count5b; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">Jennifer Patterson has suffered from low self esteem for as long as she can remember.  This ultimately led to a lack of confidence and an eating disorder.  She will discuss her journey to recovery and her process of discovering that if you keep fighting you can reach a place that een you didn't think was possible.</div>
-</div>
-                  </div></div>
-                <div class="mdl-cell mdl-cell--4-col">
-                  <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-  <div class="workTitle">The Daring Way - Melissa Vance</div>
-  <div class="spots"><?php echo $max6b - $count6b; ?> spots remaining</div>
-  <div class="descWrapper"><div class="workDesc">Is fear stopping you from doing what you love? Are you worried about what others think? Is anxiety holding you back? In this workshop we will talk about shame, self-limiting beliefs, negative self-talk and behaviours that are holding us back from living our best life. You will learn how to identify your triggers and what is really happening in your body. "The most courageous thing we can do is DARE to live the life of our dreams".</div>
-</div>
-                  </div></div>
-            </div>
+                <div class="titleThing">Pillar 2 Workshops - Resilliency</div>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col" id="B1">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Mirror Mirror - Halton Women's Place</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max1b - $count1b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="B2">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Mental Health at The Ridge - Wellness Team</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max2b - $count2b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="B3">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Music and Mental Health - Joob Vailiki</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max3b - $count3b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="B4">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Break down the Roles - Red Cross Youth Facilitators</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max4b - $count4b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="B5">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">Resolution: Confidence - Jenn Patterson</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max5b - $count5b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col" id="B6">
+                        <div class="mdl-card-square mdl-card mdl-shadow--4dp">
+                            <div class="workTitle">The Daring Way - Melissa Vance</div>
+                            <div class="spots"><span class="num">
+                                <?php echo $max6b - $count6b; ?> </span><br><br>spots remaining</div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr width="50%">
+
+                <div class="titleThing">Pillar 3 - Ridge</div>
+
+                <div class="hs101Disclaimer">Every student will be placed in a <span style="color: red">High School 101</span> workshop, which will be a Q&amp;A session with experienced high school students and teachers. <span style="color: red">Be sure to submit your questions in the registration form below!</span></div>
 
             </center>
-    </div>
+        </div>
 
-    <div class="transition">
-    </div>
+        <div class="transition">
+        </div>
 
-    <div class="third">
-        <div class="subTitle fadeIn">Register for BRidgeDay</div>
-        <div id="errorMSG" class="fadeIn"></div>
-        <center>
+        <div class="third">
+            <div class="subTitle fadeIn">Register for BRidgeDay</div>
+            <div id="errorMSG" class="fadeIn"></div>
+            <center>
 
-        <form id="reg" method='post'>
+                <form id="reg" method='post'>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="firstname" name="firstname">
-                <label class="mdl-textfield__label" for="firstname">First Name</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="lastname" name="lastname">
-                <label class="mdl-textfield__label" for="lastname">Last Name</label>
-            </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="firstname" name="firstname">
+                        <label class="mdl-textfield__label" for="firstname">First Name</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="lastname" name="lastname">
+                        <label class="mdl-textfield__label" for="lastname">Last Name</label>
+                    </div>
 
-            <!-- -->  </br>
-              </br>
+                    <!-- -->
+                    </br>
+                    </br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="email" name="email">
-                <label class="mdl-textfield__label" for="email">Email</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="school" name="school">
-                <label class="mdl-textfield__label" for="school">School</label>
-            </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="email" name="email">
+                        <label class="mdl-textfield__label" for="email">Email</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="school" name="school">
+                        <label class="mdl-textfield__label" for="school">School</label>
+                    </div>
 
 
-                      </br>
-                      </br>
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                          <input type="radio" id="option-1" class="mdl-radio__button" name="lunch" value="Y">
-                          <span class="mdl-radio__label">Cafeteria Option</span>
-                      </label>
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                          <input type="radio" id="option-2" class="mdl-radio__button" name="lunch" value="N">
-                          <span class="mdl-radio__label">Bringing Own Lunch</span>
-                      </label>
-                      <br>
-                      <br>
+                    </br>
+                    </br>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="lunch" value="Y">
+                        <span class="mdl-radio__label">Cafeteria Option</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="lunch" value="N">
+                        <span class="mdl-radio__label">Bringing Own Lunch</span>
+                    </label>
+                    <br>
+                    <br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
-                <label class="mdl-textfield__label" for="medInfo">Medical Information (optional)</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="emgContact" name="emgContact">
-                <label class="mdl-textfield__label" for="emgContact">Emergency Contact Name</label>
-            </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
+                        <label class="mdl-textfield__label" for="medInfo">Medical Information (optional)</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="emgContact" name="emgContact">
+                        <label class="mdl-textfield__label" for="emgContact">Emergency Contact Name</label>
+                    </div>
 
-            <!-- -->  </br>
-              </br>
+                    <!-- -->
+                    </br>
+                    </br>
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
-                <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone Number</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
-                <label class="mdl-textfield__label" for="learnQ">What do you hope to learn?</label>
-            </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
+                        <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone Number</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
+                        <label class="mdl-textfield__label" for="learnQ">Any questions about high school?</label>
+                    </div>
 
-            </br>
-            </br>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                <input type="radio" id="option-3" class="mdl-radio__button" name="gender" value="M">
-                <span class="mdl-radio__label">Male</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                <input type="radio" id="option-4" class="mdl-radio__button" name="gender" value="F">
-                <span class="mdl-radio__label">Female</span>
-            </label>
+                    </br>
+                    </br>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                        <input type="radio" id="option-3" class="mdl-radio__button" name="gender" value="M">
+                        <span class="mdl-radio__label">Male</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                        <input type="radio" id="option-4" class="mdl-radio__button" name="gender" value="F">
+                        <span class="mdl-radio__label">Female</span>
+                    </label>
 
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
-                <input type="radio" id="option-5" class="mdl-radio__button" name="gender" value="O">
-                <span class="mdl-radio__label">Other</span>
-            </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+                        <input type="radio" id="option-5" class="mdl-radio__button" name="gender" value="O">
+                        <span class="mdl-radio__label">Other</span>
+                    </label>
 
-            </br>
-            </br>
+                    </br>
+                    </br>
 
-            <select id="work1" name="work1" class="select-style">
-                <option value="" disabled selected>Relationship Workshop</option>
-                <?php if ($count1 < $max1){
+                    <select id="work1" name="work1" class="select-style">
+                        <option value="" disabled selected>Relationship Workshop</option>
+                        <?php if ($count1 < $max1){
                 echo "<option value='A1'>Make it or Break It? - Halton Women's Place</option>";
               }
                 if ($count2 < $max2) {
@@ -392,49 +414,58 @@ if (!$error) {
                 if ($count6 < $max6) {
                 echo "<<option value='A6'>GEM Thing - Gem Club</option>";
                 } ?>
-            </select>
+                    </select>
 
-            <br/>
-            <br/>
+                    <br/>
+                    <br/>
 
-            <select id="work2" name="work2" class="select-style">
-                <option value="" disabled selected>Resilliency Workshop</option>
-                <?php if ($count1b < $max1b){
-                echo "<option value='B1'>Mirror Mirror - Halton Women's Place</option>";
-                }
-                if ($count2b < $max2b){
-                echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
-                }
-                if ($count3b < $max3b){
-                echo "<option value='B3'>Music and Mental Health - Joob Vailiki</option>";
-                }
-                if ($count4b < $max4b){
-                echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
-                }
-                if ($count5b < $max5b){
-                echo "<option value='B5'>Resolution: Confidence - Jenn Patterson</option>";
-                }
-                if ($count6b < $max6b){
-                echo "<option value='B6'>The Daring Way - Melissa Vance</option>";
-              } ?>
-            </select>
+                    <select id="work2" name="work2" class="select-style">
+                        <option value="" disabled selected>Resilliency Workshop</option>
+                        <?php if ($count1b < $max1b){
+                              echo "<option value='B1'>Mirror Mirror - Halton Women's Place</option>";
+                              }
+                              if ($count2b < $max2b){
+                              echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
+                              }
+                              if ($count3b < $max3b){
+                              echo "<option value='B3'>Music and Mental Health - Joob Vailiki</option>";
+                              }
+                              if ($count4b < $max4b){
+                              echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
+                              }
+                              if ($count5b < $max5b){
+                              echo "<option value='B5'>Resolution: Confidence - Jenn Patterson</option>";
+                              }
+                              if ($count6b < $max6b){
+                              echo "<option value='B6'>The Daring Way - Melissa Vance</option>";
+                            } ?>
+                    </select>
 
-            </br>
-            <br>
-            <br>
+                    </br>
+                    <br>
+                    <br>
 
-            <input id="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" type="submit" value="Register">
-            </input>
-        </form>
-      </center>
-    </div>
+                    <input id="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" type="submit" value="Register">
+                    </input>
+                </form>
+            </center>
+        </div>
 
 
 
-    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="js/jquery-latest.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
-    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+        <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+        <!-- fancybox -->
+        <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+        <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+        <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
