@@ -171,7 +171,7 @@ if (!$error) {
             <div class="subTitle fadeIn">What is BRidge Day?</div>
             <div class="blurb blurb1">We are proud to present
                 <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed to help Grade 8 students bridge the gap between elementary school and high school. </div>
-            <div class="blurb blurb2">Students will attend various workshop sessions designed to promote the wellbeing of students and address key student needs in our three main pillars:
+            <div class="blurb blurb2">Students will attend various workshop sessions focused on promoting and addressing the wellbeing of students and address key student needs in our three main pillars:
                 <span style="color: red">Relationship</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
             <div class="blurb blurb3">
                 Students will also have the opportunity to meet current high school students and teachers, as well as learn about the extracurricular opportunities available at the Ridge, so that these <span style="color: red">future Trailblazers</span>                can become involved with our school and community.
@@ -188,8 +188,14 @@ if (!$error) {
         <div class="third">
             <div class="subTitle fadeIn">More Information</div>
             <center>
-                <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
+                <div class="titleThing">Lunch</div>
+
+                <div class="hs101Disclaimer">You may purchase a meal ticket for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
+
                 <hr width="50%">
+
+                <div class="titleThing">Workshops</div>
+                <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
 
                 <div class="titleThing">Pillar 1 Workshops - Relationships</div>
                 <div class="mdl-grid mdl-container">
@@ -197,7 +203,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Make it or Break It? - Halton Women's Place</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max1 - $count1; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max1 - $count1; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -206,7 +214,9 @@ if (!$error) {
                             <div class="workTitle">Resisting Toxic Media - SAVIS
                             </div>
                             <div class="spots"><span class="num">
-                                <?php echo $max2 - $count2; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max2 - $count2; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -214,7 +224,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Live, Learn, Laugh - Kimberley Menezes-Francispillai</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max3 - $count3; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max3 - $count3; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -222,15 +234,19 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Balancing Relationships - Betty Xiong, Carrie Cho</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max4 - $count4; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max4 - $count4; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col" id="A5">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">QA Thing - Ron Duberstein</div>
+                            <div class="workTitle">Q &amp; A - Ron Duberstein</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max6 - $count5; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max6 - $count5; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -238,7 +254,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">GEM Thing - Gem Club</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max6 - $count6; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max6 - $count6; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -252,7 +270,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Mirror Mirror - Halton Women's Place</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max1b - $count1b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max1b - $count1b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -260,7 +280,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Mental Health at The Ridge - Wellness Team</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max2b - $count2b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max2b - $count2b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -268,7 +290,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Music and Mental Health - Joob Vailiki</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max3b - $count3b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max3b - $count3b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -276,7 +300,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Break down the Roles - Red Cross Youth Facilitators</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max4b - $count4b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max4b - $count4b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -284,7 +310,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Resolution: Confidence - Jenn Patterson</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max5b - $count5b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max5b - $count5b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -292,7 +320,9 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">The Daring Way - Melissa Vance</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max6b - $count6b; ?> </span><br><br>spots remaining</div>
+                                <?php echo $max6b - $count6b; ?> </span>
+                                <br>
+                                <br>spots remaining</div>
 
                         </div>
                     </div>
@@ -311,7 +341,7 @@ if (!$error) {
         </div>
 
         <div class="third">
-            <div class="subTitle fadeIn">Register for BRidgeDay</div>
+            <div class="subTitle fadeIn">Register for BRidge Day</div>
             <div id="errorMSG" class="fadeIn"></div>
             <center>
 
@@ -342,10 +372,16 @@ if (!$error) {
 
                     </br>
                     </br>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                        <input type="radio" id="option-1" class="mdl-radio__button" name="lunch" value="Y">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="demo-show-toast">
+                        <input type="radio" id="demo-show-toast" class="mdl-radio__button" name="lunch" value="Y">
                         <span class="mdl-radio__label">Cafeteria Option</span>
                     </label>
+
+                    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                      <div class="mdl-snackbar__text">Test</div>
+                      <button class="mdl-snackbar__action" type="button"></button>
+                    </div>
+
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
                         <input type="radio" id="option-2" class="mdl-radio__button" name="lunch" value="N">
                         <span class="mdl-radio__label">Bringing Own Lunch</span>
@@ -372,7 +408,7 @@ if (!$error) {
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
-                        <label class="mdl-textfield__label" for="learnQ">Any questions about high school?</label>
+                        <label class="mdl-textfield__label" for="learnQ">List 2 questions about high school</label>
                     </div>
 
                     </br>
@@ -409,7 +445,7 @@ if (!$error) {
                 echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Carrie Cho</option>";
                 }
                 if ($count5 < $max5) {
-                echo "<<option value='A5'>QA Thing - Ron Duberstein</option>";
+                echo "<<option value='A5'>Q&amp;A - Ron Duberstein</option>";
                 }
                 if ($count6 < $max6) {
                 echo "<<option value='A6'>GEM Thing - Gem Club</option>";
@@ -466,6 +502,21 @@ if (!$error) {
 
 
         <script src="js/main.js" type="text/javascript"></script>
+
+
+        <script>
+        (function() {
+          'use strict';
+          window['counter'] = 0;
+          var snackbarContainer = document.querySelector('#demo-toast-example');
+          var showToastButton = document.querySelector('#demo-show-toast');
+          showToastButton.addEventListener('click', function() {
+            'use strict';
+            var data = {message: '$8 paid on cashless for cafeteria option'};
+            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+          });
+        }());
+        </script>
 </body>
 
 </html>

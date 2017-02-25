@@ -204,6 +204,7 @@ thead tr td{
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 1em;
+  color: red;
 }
 
 .workTitle{
@@ -212,7 +213,6 @@ padding-left: 15px;
 padding-right: 15px;
 padding-bottom: -10px;
 font-size: 25px;
-color: red;
 height: 37.5px;
 }
 
@@ -231,6 +231,11 @@ height: 37.5px;
 
 .num{
   font-size: 60px;
+}
+
+.workDesc{
+  font-size: 18px;
+  padding: 10px;
 }
 
 /* Mobile CSS */

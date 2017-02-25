@@ -77,6 +77,7 @@ $(document).on("ready", function() {
         }
     }
 
+    // handle a clicked workshop card - display fancybox with info from JSON
     function workClicked(work) {
       $.fancybox({
           href: '#workPopup',
@@ -87,15 +88,16 @@ $(document).on("ready", function() {
           afterLoad: function() {
               this.content = "";
               this.inner.prepend('<h1 class="fancyWorkTitle">' + work["title"] + '</h1>');
-              this.content += work["description"];
+              this.content += '<div class="workDesc">' + work["description"] + '</div>';
           }
       });
     }
 
+    // workshops json ordered by code with title and description
     var workshops = {
         "A1": {
             "title": "Make it or Break It? - Halton Women's Place",
-            "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would we fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it 19s also good to not be in a relationship!)"
+            "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would we fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it's also good to not be in a relationship!)"
         },
         "A2": {
             "title": "Resisting Toxic Media - SAVIS",
@@ -110,7 +112,7 @@ $(document).on("ready", function() {
             "description": "The workshop talks about the importance of maintaining relationship inside and outside of school, also present ways how students can balance relationships."
         },
         "A5": {
-            "title": "QA Thing - Ron Duberstein",
+            "title": "Q&amp;A - Ron Duberstein",
             "description": "This workshop will be lead by members of the Iroquois Ridge High School Gay-Straight Alliance, otherwise known as the Q&A Club. This session will provide a safe space for any students wishing to discuss and explore a range of topics including LGBT terminology, how to create a safe space, and resources available during high school."
         },
         "A6": {
@@ -169,6 +171,7 @@ $(document).on("ready", function() {
         scrollToAnchor($('.second'));
     });
 
+    // open fancybox when user clicks on workshop card
     $('.mdl-card').on("click", function(e) {
         e.preventDefault();
         workClicked(workshops[e.currentTarget.parentElement.id]);
