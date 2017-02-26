@@ -68,17 +68,11 @@ if(isset($_POST['submit'])) {
  $lunch = $_POST['lunch'];
  $gender = $_POST['gender'];
 
-$lunch = ($lunch == "Y");
-
  if ($medInfo == ""){
    $medInfo = "None";
  }
  $error = false;
 
-  if ($w1 == $w2) {
-       $error = true;
-       $errorCode = 2;
-   }
  if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender)){
    $error = true;
    $errorCode = 1;
@@ -108,6 +102,8 @@ if (!$error) {
 
    $learnQ = str_replace("'", "''", "$learnQ");
    $learnQ = str_replace("\n", "", "$learnQ");
+
+   $lunch = ($lunch == "Y");
 
     $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, lunch, userWorkshop1, userWorkshop2, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$lunch', '$w1', '$w2', '$learnQ')";
     $res = mysql_query($query);
@@ -190,7 +186,7 @@ if (!$error) {
             <center>
                 <div class="titleThing">Lunch</div>
 
-                <div class="hs101Disclaimer">You may purchase a meal ticket for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
+                <div class="hs101Disclaimer">You may purchase a meal ticket by cheque to "Iroquois Ridge High School" for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
 
                 <hr width="50%">
 
@@ -404,7 +400,7 @@ if (!$error) {
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
-                        <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone Number</label>
+                        <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
@@ -487,12 +483,9 @@ if (!$error) {
             </center>
         </div>
 
-
-
         <script type="text/javascript" src="js/jquery-latest.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
         <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-
         <!-- fancybox -->
         <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
         <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -500,9 +493,7 @@ if (!$error) {
         <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
         <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
-
         <script src="js/main.js" type="text/javascript"></script>
-
 
         <script>
         (function() {
@@ -512,7 +503,7 @@ if (!$error) {
           var showToastButton = document.querySelector('#demo-show-toast');
           showToastButton.addEventListener('click', function() {
             'use strict';
-            var data = {message: '$8 paid on cashless for cafeteria option'};
+            var data = {message: '$8 paid by cheque to "Iroquois Ridge High School" for cafeteria option'};
             snackbarContainer.MaterialSnackbar.showSnackbar(data);
           });
         }());
