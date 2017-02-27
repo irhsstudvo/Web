@@ -186,7 +186,7 @@ if (!$error) {
             <center>
                 <div class="titleThing">Lunch</div>
 
-                <div class="hs101Disclaimer">You may purchase a meal ticket by cheque to "Iroquois Ridge High School" for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
+                <div class="hs101Disclaimer">You may purchase a meal ticket by cheque to "Iroquois Ridge High School" for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni, carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
 
                 <hr width="50%">
 
@@ -202,6 +202,7 @@ if (!$error) {
                                 <?php echo $max1 - $count1; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -213,6 +214,7 @@ if (!$error) {
                                 <?php echo $max2 - $count2; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -223,6 +225,7 @@ if (!$error) {
                                 <?php echo $max3 - $count3; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -233,6 +236,7 @@ if (!$error) {
                                 <?php echo $max4 - $count4; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -243,6 +247,7 @@ if (!$error) {
                                 <?php echo $max6 - $count5; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -253,6 +258,7 @@ if (!$error) {
                                 <?php echo $max6 - $count6; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -269,6 +275,7 @@ if (!$error) {
                                 <?php echo $max1b - $count1b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -279,6 +286,7 @@ if (!$error) {
                                 <?php echo $max2b - $count2b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -289,6 +297,7 @@ if (!$error) {
                                 <?php echo $max3b - $count3b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -299,6 +308,7 @@ if (!$error) {
                                 <?php echo $max4b - $count4b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -309,6 +319,7 @@ if (!$error) {
                                 <?php echo $max5b - $count5b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -319,6 +330,7 @@ if (!$error) {
                                 <?php echo $max6b - $count6b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
+<div class="readMore">Read More</div>
 
                         </div>
                     </div>
