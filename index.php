@@ -73,7 +73,7 @@ if(isset($_POST['submit'])) {
  }
  $error = false;
 
- if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender)){
+ if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender) || empty($w1) || empty($w2)){
    $error = true;
    $errorCode = 1;
  }
@@ -186,12 +186,14 @@ if (!$error) {
             <center>
                 <div class="titleThing">Lunch</div>
 
-                <div class="hs101Disclaimer">You may purchase a meal ticket by cheque to "Iroquois Ridge High School" for food from the cafeteria instead of bringing your own lunch: $8 for a small assorted sub sandwich on a paninni, carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
+                <div class="hs101Disclaimer">You may purchase a meal ticket for food from the IRHS cafeteria instead of bringing your own lunch. <br><br>
+                  Cost: $8.00 payable by cheque made to "Iroquois Ridge High School"<br><br>
+                  Lunch: Small assorted sub sandwich on a paninni, carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
 
                 <hr width="50%">
 
                 <div class="titleThing">Workshops</div>
-                <div class="blurb">Workshops are filled on a first come, first serve basis.</div>
+                <div class="hs101Disclaimer">Workshops are filled on a first come, first serve basis.</div>
 
                 <div class="titleThing">Pillar 1 Workshops - Relationships</div>
                 <div class="mdl-grid mdl-container">
@@ -253,7 +255,7 @@ if (!$error) {
                     </div>
                     <div class="mdl-cell mdl-cell--4-col" id="A6">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">GEM Thing - Gem Club</div>
+                            <div class="workTitle">Gender Equality Movement - GEM Club</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max6 - $count6; ?> </span>
                                 <br>
