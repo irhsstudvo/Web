@@ -116,7 +116,7 @@ $(document).on("ready", function() {
             "description": "This workshop will be lead by members of the Iroquois Ridge High School Gay-Straight Alliance, otherwise known as the Q&amp;A Club. This session will provide a safe space for any students wishing to discuss and explore a range of topics including LGBT terminology, how to create a safe space, and resources available during high school."
         },
         "A6": {
-            "title": "Gender Equality Movement - GEM Club",
+            "title": "Stereotypes in High School - GEM",
             "description": "This workshop aims to challenge stereotypes in a manner that educates, motivates and encourages students to dispute popular social stigmas and get involved in what they love! We will present an interactive Q&amp;A session, play team building activities and host a presentation on combating gender stereotypes in accordance with clubs, courses, and general school life."
         },
         "B1": {
@@ -129,7 +129,7 @@ $(document).on("ready", function() {
         },
         "B3": {
             "title": "Music and Mental Health - Joob Vailiki",
-            "description": "Music and Mental Health"
+            "description": "This workshop will use interactive exercises including singing and clapping to encourage and inspire comfort and connection between peers. Using musical elements such as: rhythm, harmony, unison, to illustrate communication and listening. Teaching about how to channel emotions in a positive way, encouraging self-expression and stress relief. We are all unique individuals with our own stresses and worries. However, one thing that's universal is the therapeutic and healing properties of music."
         },
         "B4": {
             "title": "Break down the Roles - Red Cross Youth Facilitators",

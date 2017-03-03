@@ -39,18 +39,18 @@ $count5b = mysql_num_rows($result5b);
 $result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
 $count6b = mysql_num_rows($result6b);
 
-$max1 = 5;
-$max2 = 5;
-$max3 = 5;
-$max4 = 5;
-$max5 = 5;
-$max6 = 5;
-$max1b = 5;
-$max2b = 5;
-$max3b = 5;
-$max4b = 5;
-$max5b = 5;
-$max6b = 5;
+$max1 = 120;
+$max2 = 80;
+$max3 = 35;
+$max4 = 50;
+$max5 = 60;
+$max6 = 40;
+$max1b = 100;
+$max2b = 80;
+$max3b = 30;
+$max4b = 40;
+$max5b = 70;
+$max6b = 30;
 
 if(isset($_POST['submit'])) {
 
@@ -58,6 +58,7 @@ if(isset($_POST['submit'])) {
  $fname = strip_tags(trim($_POST['firstname']));
  $lname = strip_tags(trim($_POST['lastname']));
  $school = strip_tags(trim($_POST['school']));
+ $teacher = strip_tags(trim($_POST['teacher']));
  $medInfo = strip_tags(trim($_POST['medInfo']));
  $emgContact = strip_tags(trim($_POST['emgContact']));
  $emgPhone = strip_tags(trim($_POST['emgPhone']));
@@ -73,7 +74,7 @@ if(isset($_POST['submit'])) {
  }
  $error = false;
 
- if (empty($email) || empty($fname) || empty($lname) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender) || empty($w1) || empty($w2)){
+ if (empty($email) || empty($fname) || empty($lname)|| empty($teacher) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender) || empty($w1) || empty($w2)){
    $error = true;
    $errorCode = 1;
  }
@@ -91,6 +92,9 @@ if (!$error) {
    $school = str_replace("'", "''", "$school");
    $school = str_replace("\n", "", "$school");
 
+      $teacher = str_replace("'", "''", "$teacher");
+      $teacher = str_replace("\n", "", "$teacher");
+
    $medInfo = str_replace("'", "''", "$medInfo");
    $medInfo = str_replace("\n", "", "$medInfo");
 
@@ -105,7 +109,7 @@ if (!$error) {
 
    $lunch = ($lunch == "Y");
 
-    $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userGender, userMedInfo, userEmgName, userEmgNum, lunch, userWorkshop1, userWorkshop2, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$lunch', '$w1', '$w2', '$learnQ')";
+    $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userTeacher, userGender, userMedInfo, userEmgName, userEmgNum, lunch, userWorkshop1, userWorkshop2, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$teacher', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$lunch', '$w1', '$w2', '$learnQ')";
     $res = mysql_query($query);
 
     if ($res) {
@@ -255,7 +259,7 @@ if (!$error) {
                     </div>
                     <div class="mdl-cell mdl-cell--4-col" id="A6">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">Gender Equality Movement - GEM Club</div>
+                            <div class="workTitle">Stereotypes in High School - GEM</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max6 - $count6; ?> </span>
                                 <br>
@@ -416,6 +420,14 @@ if (!$error) {
                         <input class="mdl-textfield__input" type="text" id="emgPhone" name="emgPhone">
                         <label class="mdl-textfield__label" for="emgPhone">Emergency Contact Phone</label>
                     </div>
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="teacher" name="teacher">
+                        <label class="mdl-textfield__label" for="teacher">Teacher Advisor Name</label>
+                    </div>
+
+                    <br>
+                    <br>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="learnQ" name="learnQ">
                         <label class="mdl-textfield__label" for="learnQ">List 2 questions about high school</label>
@@ -441,7 +453,7 @@ if (!$error) {
                     </br>
 
                     <select id="work1" name="work1" class="select-style">
-                        <option value="" disabled selected>Relationship Workshop</option>
+                        <option value="" disabled selected>Relationship Workshop Choice</option>
                         <?php if ($count1 < $max1){
                 echo "<option value='A1'>Make it or Break It? - Halton Women's Place</option>";
               }
@@ -458,7 +470,7 @@ if (!$error) {
                 echo "<<option value='A5'>Q&amp;A - Ron Duberstein</option>";
                 }
                 if ($count6 < $max6) {
-                echo "<<option value='A6'>GEM Thing - Gem Club</option>";
+                echo "<<option value='A6'>Stereotypes in High School - GEM</option>";
                 } ?>
                     </select>
 
@@ -466,7 +478,7 @@ if (!$error) {
                     <br/>
 
                     <select id="work2" name="work2" class="select-style">
-                        <option value="" disabled selected>Resilliency Workshop</option>
+                        <option value="" disabled selected>Resilliency Workshop Choice</option>
                         <?php if ($count1b < $max1b){
                               echo "<option value='B1'>Mirror Mirror - Halton Women's Place</option>";
                               }

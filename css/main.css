@@ -218,6 +218,9 @@ thead tr td {
   color: red;
 }
 
+#reg > div:nth-child(22){
+  width: 375px !important;
+}
 
 /* Mobile CSS */
 
