@@ -128,7 +128,7 @@ $(document).on("ready", function() {
             "description": "Ever feel stressed and don’t know how to cope? Ever wonder how to slow down your hectic life and take a break? Well you’ve come to the right place. This workshop will guide you through multiple techniques on distressing along with educating you about the multiple resources provided at the Ridge and community for your mental health support."
         },
         "B3": {
-            "title": "Music and Mental Health - Joob Vailiki",
+            "title": "Music As Medicine For Mental Health - Joob Vailiki",
             "description": "This workshop will use interactive exercises including singing and clapping to encourage and inspire comfort and connection between peers. Using musical elements such as: rhythm, harmony, unison, to illustrate communication and listening. Teaching about how to channel emotions in a positive way, encouraging self-expression and stress relief. We are all unique individuals with our own stresses and worries. However, one thing that's universal is the therapeutic and healing properties of music."
         },
         "B4": {

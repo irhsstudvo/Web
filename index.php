@@ -7,7 +7,7 @@ $result1 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A1'
 $count1 = mysql_num_rows($result1);
 
 $result2 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A2'");
-$count12= mysql_num_rows($result2);
+$count2= mysql_num_rows($result2);
 
 $result3 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A3'");
 $count3 = mysql_num_rows($result3);
@@ -25,7 +25,7 @@ $result1b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B1
 $count1b = mysql_num_rows($result1b);
 
 $result2b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B2'");
-$count12b= mysql_num_rows($result2b);
+$count2b= mysql_num_rows($result2b);
 
 $result3b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B3'");
 $count3b = mysql_num_rows($result3b);
@@ -39,17 +39,17 @@ $count5b = mysql_num_rows($result5b);
 $result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
 $count6b = mysql_num_rows($result6b);
 
-$max1 = 120;
+$max1 = 100;
 $max2 = 80;
-$max3 = 35;
-$max4 = 50;
-$max5 = 60;
-$max6 = 40;
+$max3 = 30;
+$max4 = 40;
+$max5 = 50;
+$max6 = 25;
 $max1b = 100;
 $max2b = 80;
-$max3b = 30;
-$max4b = 40;
-$max5b = 70;
+$max3b = 25;
+$max4b = 30;
+$max5b = 60;
 $max6b = 30;
 
 if(isset($_POST['submit'])) {
@@ -116,7 +116,7 @@ if (!$error) {
       $errorCode = 0;
     }
 }
-  header("Location: https://bridgeday.000webhostapp.com?error=".$errorCode."#reg");
+  header("Location: https://bridgeday.000webhostapp.com?error=".$errorCode."#regThing");
 
 }
 
@@ -170,11 +170,11 @@ if (!$error) {
         <div class="second">
             <div class="subTitle fadeIn">What is BRidge Day?</div>
             <div class="blurb blurb1">We are proud to present
-                <span style="color: red">BRidge Day</span>, a full day conference at Iroquois Ridge High School designed to help Grade 8 students bridge the gap between elementary school and high school. </div>
-            <div class="blurb blurb2">Students will attend various workshop sessions focused on promoting and addressing the wellbeing of students and address key student needs in our three main pillars:
-                <span style="color: red">Relationship</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
+                <span style="color: red">BRidge Day</span>: a full day conference at Iroquois Ridge High School designed to help Grade 8 students bridge the gap between elementary school and high school. </div>
+            <div class="blurb blurb2">Students will attend various workshop sessions focused on promoting and addressing their wellbeing and key needs under three main pillars:
+                <span style="color: red">Relationships</span>, <span style="color: red">Resiliency</span>, and <span style="color: red">Ridge</span>. </div>
             <div class="blurb blurb3">
-                Students will also have the opportunity to meet current high school students and teachers, as well as learn about the extracurricular opportunities available at the Ridge, so that these <span style="color: red">future Trailblazers</span>                can become involved with our school and community.
+                Students will also have the opportunity to meet current high school students and teachers, as well as learn about the extracurricular opportunities available at the Ridge. We want these <span style="color: red">future Trailblazers</span>                to become involved with our school and community.
             </div>
             <div class="blurb blurb4">We look forward to meeting all the grade 8 students who will be joining us in <span style="color: red">September 2017!</span></div>
 
@@ -190,12 +190,91 @@ if (!$error) {
             <center>
                 <div class="titleThing">Lunch</div>
 
-                <div class="hs101Disclaimer">You may purchase a meal ticket for food from the IRHS cafeteria instead of bringing your own lunch. <br><br>
-                  Cost: $8.00 payable by cheque made to "Iroquois Ridge High School"<br><br>
-                  Lunch: Small assorted sub sandwich on a paninni, carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.</div>
+                <div class="hs101Disclaimer">You may bring your own lunch or purchase a meal ticket for food from the IRHS cafeteria.
+                    <br>
+                    <br>
+
+                    <b>Caf Lunch:</b>
+                    <br>Small assorted sub (turkey, ham, salami, cheese, lettuce and tomato), carrot/celery sticks with dip, 1 homemade cookie, 1 bag of baked chips, and a small water.
+                    <br>
+                    <br>
+                    <b>  Cost:</b>
+                    <br>$8.00 payable by cheque made to "Iroquois Ridge High School"
+                    <br>
+                    <br>
+                    <span style="color: red">* You must inform your homeroom teacher of your lunch choice</span></div>
 
                 <hr width="50%">
 
+                <center>
+                    <div class="titleThing">Schedule</div>
+                    <table id="sched" cellpadding="15">
+                        <thead>
+                            <tr>
+                                <td>Start</td>
+                                <td>End</td>
+                                <td>Location</td>
+                                <td>Session</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>8:15am</td>
+                            <td>8:50am</td>
+                            <td>Registration Table</td>
+                            <td>Student registration in the forum</td>
+                        </tr>
+                        <tr>
+                            <td>9:00am</td>
+                            <td>10:00am</td>
+                            <td>Double Gym</td>
+                            <td><a href="http://www.sarahwells.ca" target="_blank">Sarah Wells Keynote</a></td>
+                        </tr>
+                        <tr>
+                            <td>10:00am</td>
+                            <td>10:15am</td>
+                            <td>Double Gym</td>
+                            <td>Snack</td>
+                        </tr>
+                        <tr>
+                            <td>10:15am</td>
+                            <td>11:00am</td>
+                            <td>Various</td>
+                            <td>Relationships Workshops</td>
+                        </tr>
+                        <tr>
+                            <td>11:00am</td>
+                            <td>12:30pm</td>
+                            <td>Double Gym</td>
+                            <td>Spirit Rally and Club Fair</td>
+                        </tr>
+                        <tr>
+                            <td>12:30pm</td>
+                            <td>1:00pm</td>
+                            <td>Cafeteria</td>
+                            <td>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td>1:00pm</td>
+                            <td>1:45pm</td>
+                            <td>Various</td>
+                            <td>Resilliency Workshop</td>
+                        </tr>
+                        <tr>
+                            <td>1:45pm</td>
+                            <td>2:15pm</td>
+                            <td>Double Gym and Cafeteria</td>
+                            <td>High School 101 Workshops</td>
+                        </tr>
+                        <tr>
+                            <td>2:15pm</td>
+                            <td>2:30pm</td>
+                            <td>Double Gym</td>
+                            <td>Closing Ceremonies</td>
+                        </tr>
+                    </table>
+                </center>
+
+                <hr width="50%">
                 <div class="titleThing">Workshops</div>
                 <div class="hs101Disclaimer">Workshops are filled on a first come, first serve basis.</div>
 
@@ -208,7 +287,7 @@ if (!$error) {
                                 <?php echo $max1 - $count1; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -220,7 +299,7 @@ if (!$error) {
                                 <?php echo $max2 - $count2; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -231,7 +310,7 @@ if (!$error) {
                                 <?php echo $max3 - $count3; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -242,7 +321,7 @@ if (!$error) {
                                 <?php echo $max4 - $count4; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -250,10 +329,10 @@ if (!$error) {
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
                             <div class="workTitle">Q &amp; A - Ron Duberstein</div>
                             <div class="spots"><span class="num">
-                                <?php echo $max6 - $count5; ?> </span>
+                                <?php echo $max5 - $count5; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -264,7 +343,7 @@ if (!$error) {
                                 <?php echo $max6 - $count6; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -281,7 +360,7 @@ if (!$error) {
                                 <?php echo $max1b - $count1b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -292,18 +371,18 @@ if (!$error) {
                                 <?php echo $max2b - $count2b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col" id="B3">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">Music and Mental Health - Joob Vailiki</div>
+                            <div class="workTitle">Music As Medicine For Mental Health - Joob Vailiki</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max3b - $count3b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -314,7 +393,7 @@ if (!$error) {
                                 <?php echo $max4b - $count4b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -325,7 +404,7 @@ if (!$error) {
                                 <?php echo $max5b - $count5b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -336,7 +415,7 @@ if (!$error) {
                                 <?php echo $max6b - $count6b; ?> </span>
                                 <br>
                                 <br>spots remaining</div>
-<div class="readMore">Read More</div>
+                            <div class="readMore">Read More</div>
 
                         </div>
                     </div>
@@ -355,7 +434,7 @@ if (!$error) {
         </div>
 
         <div class="third">
-            <div class="subTitle fadeIn">Register for BRidge Day</div>
+            <div class="subTitle fadeIn" id="regThing">Register for BRidge Day</div>
             <div id="errorMSG" class="fadeIn"></div>
             <center>
 
@@ -392,8 +471,8 @@ if (!$error) {
                     </label>
 
                     <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
-                      <div class="mdl-snackbar__text">Test</div>
-                      <button class="mdl-snackbar__action" type="button"></button>
+                        <div class="mdl-snackbar__text">Test</div>
+                        <button class="mdl-snackbar__action" type="button"></button>
                     </div>
 
                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
@@ -458,7 +537,7 @@ if (!$error) {
                 echo "<option value='A1'>Make it or Break It? - Halton Women's Place</option>";
               }
                 if ($count2 < $max2) {
-                echo "<<option value='A2'>Resisting Toxic Media - SAVIS</option>";;
+                echo "<<option value='A2'>Resisting Toxic Media - SAVIS</option>";
               }
                 if ($count3 < $max3) {
                 echo "<<option value='A3'>Live, Learn, Laugh - Kimberley Menezes-Francispillai</option>";
@@ -486,7 +565,7 @@ if (!$error) {
                               echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
                               }
                               if ($count3b < $max3b){
-                              echo "<option value='B3'>Music and Mental Health - Joob Vailiki</option>";
+                              echo "<option value='B3'>Music As Medicine For Mental Health - Joob Vailiki</option>";
                               }
                               if ($count4b < $max4b){
                               echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
@@ -522,17 +601,19 @@ if (!$error) {
         <script src="js/main.js" type="text/javascript"></script>
 
         <script>
-        (function() {
-          'use strict';
-          window['counter'] = 0;
-          var snackbarContainer = document.querySelector('#demo-toast-example');
-          var showToastButton = document.querySelector('#demo-show-toast');
-          showToastButton.addEventListener('click', function() {
-            'use strict';
-            var data = {message: '$8 paid by cheque to "Iroquois Ridge High School" for cafeteria option'};
-            snackbarContainer.MaterialSnackbar.showSnackbar(data);
-          });
-        }());
+            (function() {
+                'use strict';
+                window['counter'] = 0;
+                var snackbarContainer = document.querySelector('#demo-toast-example');
+                var showToastButton = document.querySelector('#demo-show-toast');
+                showToastButton.addEventListener('click', function() {
+                    'use strict';
+                    var data = {
+                        message: '$8 paid by cheque to "Iroquois Ridge High School" for cafeteria option'
+                    };
+                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                });
+            }());
         </script>
 </body>
 

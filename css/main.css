@@ -222,14 +222,29 @@ thead tr td {
   width: 375px !important;
 }
 
-/* Mobile CSS */
+#sched {
+    margin-top: 35px;
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 80%;
+}
+td {
+    border: 1px solid black;
+}
+thead tr td {
+    font-weight: bold;
+}
 
+/* Mobile CSS */
 @media screen and (max-width: 700px) {
     .fullscreen-bg {
         background: none;
     }
     .fullscreen-bg__video {
         display: none;
+    }
+    .transition{
+      display: none;
     }
     .subTitle {
         font-size: 30px !important;
@@ -243,5 +258,11 @@ thead tr td {
     }
     .select-style {
         width: 90% !important;
+    }
+    #sched{
+      font-size: 15px !important;
+    }
+    #sched tr td{
+      padding: 7;
     }
 }

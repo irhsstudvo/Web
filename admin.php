@@ -3,14 +3,7 @@
 ob_start();
 session_start();
 require_once 'dbconnect.php';
-?>
-<html>
-<head>
-    <title>BridgeDay Admin</title>
-</head>
 
-<body>
-  <?php
   $query = "SELECT userId, userFName, userLName, userEmail, userSchool, userTeacher, userGender, userMedInfo, userEmgName, userEmgNum, userWorkshop1, lunch, userWorkshop2, userQResponse, timeEntered FROM users";
 
   $res = mysql_query($query);
@@ -42,7 +35,11 @@ require_once 'dbconnect.php';
      echo "NEWFIELD";
   echo $entry["userQResponse"];
   echo "NEWFIELD";
-echo $entry["lunch"];
+  if ($entry["lunch"] == "1"){
+    echo "Yes";
+  }else{
+    echo "No";
+  }
 echo "NEWFIELD";
      echo $entry["userWorkshop1"];
      echo "NEWFIELD";
@@ -53,6 +50,3 @@ echo "NEWFIELD";
   }
   mysql_free_result($res);
    ?>
-</body>
-
-</html>
