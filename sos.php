@@ -73,12 +73,35 @@ $max6b = 30;
 <html>
 
 <head>
-  <title>BridgeDay SOS</title></head>
+  <title>BridgeDay SOS</title>
+  <style>
+  body{
+    font-family: sans-serif;
+    font-size: 25px;
+  }
+  h1{
+    font-size: 50px !important;
+    color: red;
+  }
+  table, tr, td{
+    border: 1px solid black;
+  }
+  table{
+    padding-right: 20px;
+      display: inline;
+  }
+  select, input{
+    width: 350px;
+  }
+  </style>
+</head>
 
   <body>
 
-<table cellpadding="15">
-
+<center>
+  <h1>BridgeDay S.O.S.</h1>
+  <h3>Current Workshop Spaces</h3>
+<table cellpadding="10">
   <tr>
     <td>A1
     </td>
@@ -133,92 +156,117 @@ $max6b = 30;
       <?php echo $max6 - $count6; ?>
     </td>
   </tr>
-  <tr>
-    <td>B1
-    </td>
-    <td>Mirror Mirror
-    </td>
-    <td>
-      <?php echo $max1b - $count1b; ?>
-    </td>
-  </tr>
-  <tr>
-    <td>B2
-    </td>
-    <td>Mental Health at The Ridge
-    </td>
-    <td>
-      <?php echo $max2b - $count2b; ?>
-    </td>
-  </tr>
-  <tr>
-    <td>B3
-    </td>
-    <td>Music as Medicine for Mental Health
-    </td>
-    <td>
-      <?php echo $max3b - $count3b; ?>
-    </td>
-  </tr>
-  <tr>
-    <td>B4
-    </td>
-    <td>Break Down the Roles
-    </td>
-    <td>
-      <?php echo $max4b - $count4b; ?>
-    </td>
-  </tr>
-  <tr>
-    <td>B5
-    </td>
-    <td>Resolution: Confidence
-    </td>
-    <td>
-      <?php echo $max5b - $count5b; ?>
-    </td>
-  </tr>
-  <tr>
-    <td>B6
-    </td>
-    <td>The Daring Way
-    </td>
-    <td>
-      <?php echo $max6b - $count6b; ?>
-    </td>
-  </tr>
 </table>
 
+<table cellpadding="10">
+<tr>
+  <td>B1
+  </td>
+  <td>Mirror Mirror
+  </td>
+  <td>
+    <?php echo $max1b - $count1b; ?>
+  </td>
+</tr>
+<tr>
+  <td>B2
+  </td>
+  <td>Mental Health at The Ridge
+  </td>
+  <td>
+    <?php echo $max2b - $count2b; ?>
+  </td>
+</tr>
+<tr>
+  <td>B3
+  </td>
+  <td>Music as Medicine for Mental Health
+  </td>
+  <td>
+    <?php echo $max3b - $count3b; ?>
+  </td>
+</tr>
+<tr>
+  <td>B4
+  </td>
+  <td>Break Down the Roles
+  </td>
+  <td>
+    <?php echo $max4b - $count4b; ?>
+  </td>
+</tr>
+<tr>
+  <td>B5
+  </td>
+  <td>Resolution: Confidence
+  </td>
+  <td>
+    <?php echo $max5b - $count5b; ?>
+  </td>
+</tr>
+<tr>
+  <td>B6
+  </td>
+  <td>The Daring Way
+  </td>
+  <td>
+    <?php echo $max6b - $count6b; ?>
+  </td>
+</tr>
+</table>
+<hr width="50%">
 
+<h3>Update Student Info</h3>
 <form id="sos" method="post">
-<select id="user" name="user">
-      <option value="" disabled selected>Select User</option>
-      <?php
-      $query = "SELECT userId, userFName, userLName, userSchool, userWorkshop1, userWorkshop2 FROM users";
+    <select id="user" name="user">
+        <option value="" disabled selected>Select Student</option>
+        <?php
+        $query = "SELECT userId, userFName, userLName, userSchool, userWorkshop1, userWorkshop2 FROM users";
 
-      $res = mysql_query($query);
+        $res = mysql_query($query);
 
-      while ($results = mysql_fetch_array($res, MYSQL_ASSOC)) {
-        $data[] = $results;
-      }
+        while ($results = mysql_fetch_array($res, MYSQL_ASSOC)) {
+          $data[] = $results;
+        }
 
-      foreach ($data as $entry){
-        echo "<option value='" . $entry["userId"] . "'>" . $entry["userId"] . " " . $entry["userFName"] . " " . $entry["userLName"] . " " . $entry["userSchool"] . " " . $entry["userWorkshop1"] . " " . $entry["userWorkshop2"] . "</option>";
-      }
-      mysql_free_result($res);
+        foreach ($data as $entry){
+          echo "<option value='" . $entry["userId"] . "'>" . $entry["userId"] . " " . $entry["userFName"] . " " . $entry["userLName"] . " " . $entry["userSchool"] . " " . $entry["userWorkshop1"] . " " . $entry["userWorkshop2"] . "</option>";
+        }
+        mysql_free_result($res);
 
-       ?>
-</select>
-<br><br>What do you want to update?
-<select id="whichEntry" name="whichEntry">
-      <option value="" disabled selected>Select Entry</option>
-      <option value="userWorkshop1">Relationships Workshop</option>
-      <option value="userWorkshop2">Resilliency Workshop</option>
-</select>
-<br><br>New Entry: <input type="text" name='newEntry' id='newEntry'></input>
-<input id="submit" name="submit" type="submit" value="Update">
-</input>
+         ?>
+    </select>
+    <br><br>What do you want to update? <br>
+    <select id="whichEntry" name="whichEntry">
+          <option value="" disabled selected>Select Entry</option>
+          <option value="userWorkshop1">Relationships Workshop (A)</option>
+          <option value="userWorkshop2">Resilliency Workshop (B)</option>
+    </select>
+    <br><br>Select New Workshop<br>
+    <select id="newEntry" name="newEntry">
+          <option value="" disabled selected>Select New Worshop</option>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="A3">A3</option>
+          <option value="A4">A4</option>
+          <option value="A5">A5</option>
+          <option value="A6">A6</option>
+
+          <option value="B1">B1</option>
+          <option value="B2">B2</option>
+          <option value="B3">B3</option>
+          <option value="B4">B4</option>
+          <option value="B5">B5</option>
+          <option value="B6">B6</option>
+    </select>
+    <br> <br>
+    <input id="submit" name="submit" type="submit" value="Update"> </input>
 </form>
+
+<hr width="50%">
+<h3><a href="/reg.php">Register New Student Here</a></h3>
+
+</center>
 
 </body>
 

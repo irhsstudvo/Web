@@ -101,15 +101,15 @@ $(document).on("ready", function() {
         },
         "A2": {
             "title": "Resisting Toxic Media - SAVIS",
-            "description": "Gender, body, image and relationships. Examines gender steotypes and their impact on self image. Explore how this affects our relationship with ourseves and others. Explain how you can push back against toxic media messages."
+            "description": "Gender, body, image and relationships. This workshop examines gender steotypes and their impact on self image. We will explore how this affects our relationship with ourselves and others. We will also explain how you can push back against toxic media messages."
         },
         "A3": {
             "title": "Live, Learn, Laugh - Kimberley Menezes-Francispilla",
-            "description": "The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide soem tools for coping b) Look at ways to develop healthry relationships. c) Address common worries that students experience when entering high school and how to change your worries into solvable issues."
+            "description": "The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide some tools for coping b) Look at ways to develop healthy relationships. c) Address common worries that students experience when entering high school and how to change those worries into solvable issues."
         },
         "A4": {
             "title": "Balancing Relationships - Betty Xiong, Carrie Cho",
-            "description": "The workshop talks about the importance of maintaining relationship inside and outside of school, also present ways how students can balance relationships."
+            "description": "This workshop talks about the importance of maintaining relationships inside and outside of school. We will also examine ways that students can balance those relationships."
         },
         "A5": {
             "title": "Q&amp;A - Ron Duberstein",
@@ -125,7 +125,7 @@ $(document).on("ready", function() {
         },
         "B2": {
             "title": "Mental Health at The Ridge - Wellness Team",
-            "description": "Ever feel stressed and don’t know how to cope? Ever wonder how to slow down your hectic life and take a break? Well you’ve come to the right place. This workshop will guide you through multiple techniques on distressing along with educating you about the multiple resources provided at the Ridge and community for your mental health support."
+            "description": "Ever feel stressed and don’t know how to cope? Ever wonder how to slow down your hectic life and take a break? Well you’ve come to the right place. This workshop will guide you through multiple techniques on distressing along with educating you about the multiple resources provided at the Ridge and in our community for your mental health support."
         },
         "B3": {
             "title": "Music As Medicine For Mental Health - Joob Vailiki",
@@ -137,7 +137,7 @@ $(document).on("ready", function() {
         },
         "B5": {
             "title": "Resolution: Confidence - Jenn Patterson",
-            "description": "Jennifer Patterson has suffered from low self esteem for as long as she can remember. This ultimately led to a lack of confidence and an eating disorder. She will discuss her journey to recovery and her process of discovering that if you keep fighting you can reach a place that een you didn't think was possible."
+            "description": "Jennifer Patterson has suffered from low self esteem for as long as she can remember. This ultimately led to a lack of confidence and an eating disorder. She will discuss her journey to recovery and her process of discovering that if you keep fighting you can reach a place that even you didn't think was possible."
         },
         "B6": {
             "title": "The Daring Way - Melissa Vance",
