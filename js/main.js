@@ -97,7 +97,7 @@ $(document).on("ready", function() {
     var workshops = {
         "A1": {
             "title": "Make it or Break It? - Halton Women's Place",
-            "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would we fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it's also good to not be in a relationship!)"
+            "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would they would fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it's also good to not be in a relationship!)"
         },
         "A2": {
             "title": "Resisting Toxic Media - SAVIS",
@@ -108,7 +108,7 @@ $(document).on("ready", function() {
             "description": "The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide some tools for coping b) Look at ways to develop healthy relationships. c) Address common worries that students experience when entering high school and how to change those worries into solvable issues."
         },
         "A4": {
-            "title": "Balancing Relationships - Betty Xiong, Carrie Cho",
+            "title": "Balancing Relationships - Betty Xiong, Heman Madan",
             "description": "This workshop talks about the importance of maintaining relationships inside and outside of school. We will also examine ways that students can balance those relationships."
         },
         "A5": {

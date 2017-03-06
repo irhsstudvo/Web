@@ -190,7 +190,7 @@ if (!$error) {
             <center>
                 <div class="titleThing">Lunch</div>
 
-                <div class="hs101Disclaimer">You may bring your own lunch or purchase a meal ticket for food from the IRHS cafeteria.
+                <div class="hs101Disclaimer">You may bring your own lunch or purchase a meal ticket for food from the IRHS cafeteria. A light snack will be provided during the morning break.
                     <br>
                     <br>
 
@@ -205,6 +205,12 @@ if (!$error) {
                     <span style="color: red">* You must inform your homeroom teacher of your lunch choice</span></div>
 
                 <hr width="50%">
+
+                    <div class="titleThing">Transportation</div>
+
+                      <div class="hs101Disclaimer">Transportation is the responsibility of the feeder schools and/or the individual student.</div>
+
+                    <hr width="50%">
 
                 <center>
                     <div class="titleThing">Schedule</div>
@@ -225,9 +231,15 @@ if (!$error) {
                         </tr>
                         <tr>
                             <td>8:50am</td>
+                            <td>9:00am</td>
+                            <td>Double Gym</td>
+                            <td>Opening Ceremonies</td>
+                        </tr>
+                        <tr>
+                            <td>9:00am</td>
                             <td>10:00am</td>
                             <td>Double Gym</td>
-                            <td>Keynote Speaker - <a href="http://www.sarahwells.ca" target="_blank">Sarah Wells </a></td>
+                            <td>Keynote Speaker - <a href="http://www.sarahwells.ca" target="_blank">Sarah Wells</a></td>
                         </tr>
                         <tr>
                             <td>10:00am</td>
@@ -316,7 +328,7 @@ if (!$error) {
                     </div>
                     <div class="mdl-cell mdl-cell--4-col" id="A4">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">Balancing Relationships - Betty Xiong, Carrie Cho</div>
+                            <div class="workTitle">Balancing Relationships - Betty Xiong, Heman Madan</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max4 - $count4; ?> </span>
                                 <br>
@@ -543,7 +555,7 @@ if (!$error) {
                 echo "<<option value='A3'>Live, Learn, Laugh - Kimberley Menezes-Francispillai</option>";
               }
                 if ($count4 < $max4) {
-                echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Carrie Cho</option>";
+                echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Heman Madan</option>";
                 }
                 if ($count5 < $max5) {
                 echo "<<option value='A5'>Q&amp;A - Ron Duberstein</option>";
@@ -585,6 +597,7 @@ if (!$error) {
                     <input id="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" type="submit" value="Register">
                     </input>
                 </form>
+
             </center>
         </div>
 
