@@ -121,7 +121,7 @@ $(document).on("ready", function() {
         },
         "B1": {
             "title": "Mirror Mirror - Halton Women's Place",
-            "description": "Mirror Mirror - Body image, self-esteem, photoshop and filters, advertising, and the impact on our mental health."
+            "description": "This workshop will explore personal Body Image and Mental Health. How is your self-esteem impacted by photoshop and social media filters? What affect does advertising and the media in general have on you? What can you do to take control of your own image and feel great about yourself? Let's talk!"
         },
         "B2": {
             "title": "Mental Health at The Ridge - Wellness Team",
