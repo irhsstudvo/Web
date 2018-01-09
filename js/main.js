@@ -87,8 +87,8 @@ $(document).on("ready", function() {
           autoSize: false,
           afterLoad: function() {
               this.content = "";
-              this.inner.prepend('<h1 class="fancyWorkTitle">' + work["title"] + '</h1>');
-              this.content += '<div class="workDesc">' + work["description"] + '</div>';
+              this.inner.prepend('<h1 class="fancyWorkTitle">' + work.title + '</h1>');
+              this.content += '<div class="workDesc">' + work.description + '</div>';
           }
       });
     }
@@ -96,7 +96,7 @@ $(document).on("ready", function() {
     // workshops json ordered by code with title and description
     var workshops = {
         "A1": {
-            "title": "Make it or Break It? - Halton Women's Place",
+            "title": "Make it or Break It? - HWP",
             "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would they would fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it's also good to not be in a relationship!)"
         },
         "A2": {
@@ -120,7 +120,7 @@ $(document).on("ready", function() {
             "description": "This workshop aims to challenge stereotypes in a manner that educates, motivates and encourages students to dispute popular social stigmas and get involved in what they love! We will present an interactive Q&amp;A session, play team building activities and host a presentation on combating gender stereotypes in accordance with clubs, courses, and general school life."
         },
         "B1": {
-            "title": "Mirror Mirror - Halton Women's Place",
+            "title": "Mirror Mirror - HWP",
             "description": "This workshop will explore personal Body Image and Mental Health. How is your self-esteem impacted by photoshop and social media filters? What affect does advertising and the media in general have on you? What can you do to take control of your own image and feel great about yourself? Let's talk!"
         },
         "B2": {
@@ -143,7 +143,7 @@ $(document).on("ready", function() {
             "title": "The Daring Way - Melissa Vance",
             "description": 'Is fear stopping you from doing what you love? Are you worried about what others think? Is anxiety holding you back? In this workshop we will talk about shame, self-limiting beliefs, negative self-talk and behaviours that are holding us back from living our best life. You will learn how to identify your triggers and what is really happening in your body. "The most courageous thing we can do is DARE to live the life of our dreams".'
         }
-    }
+    };
 
     /*            */
     /*    MAIN    */

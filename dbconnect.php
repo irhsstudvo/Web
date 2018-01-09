@@ -1,21 +1,21 @@
 <?php
 
-  $json = file_get_contents('https://bridgeday.000webhostapp.com/config.json');
-  $details = json_decode($json, true);
+$json = file_get_contents('https://bridgeday.000webhostapp.com/config.json');
+$details = json_decode($json, true);
 
- $host = $details["dbhost"];
- $user = $details["dbuser"];
- $pass = $details["dbpass"];
- $name = $details["dbname"];
+$host = $details["dbhost"];
+$user = $details["dbuser"];
+$pass = $details["dbpass"];
+$name = $details["dbname"];
 
- $conn = mysql_connect($host,$user,$pass);
- $dbcon = mysql_select_db($name);
+$conn = mysql_connect($host,$user,$pass);
+$dbcon = mysql_select_db($name);
 
- if ( !$conn ) {
+if ( !$conn ) {
   die("Connection failed : " . mysql_error());
- }
+}
 
- if ( !$dbcon ) {
+if ( !$dbcon ) {
   die("Database Connection failed : " . mysql_error());
 }
 

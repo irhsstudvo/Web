@@ -41,35 +41,38 @@ $count5b = mysql_num_rows($result5b);
 $result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
 $count6b = mysql_num_rows($result6b);
 
-$max1 = 100;
-$max2 = 80;
-$max3 = 30;
-$max4 = 40;
-$max5 = 50;
-$max6 = 25;
-$max1b = 100;
-$max2b = 80;
-$max3b = 25;
-$max4b = 30;
-$max5b = 60;
-$max6b = 30;
+$json = file_get_contents('https://bridgeday.000webhostapp.com/max.json');
+$details = json_decode($json, true);
 
-  if(isset($_POST['submit'])) {
+$max1 = $details["1"];
+$max2 = $details["2"];
+$max3 = $details["3"];
+$max4 = $details["4"];
+$max5 = $details["5"];
+$max6 = $details["6"];
+$max1b = $details["1b"];
+$max2b = $details["2b"];
+$max3b = $details["3b"];
+$max4b = $details["4b"];
+$max5b = $details["5b"];
+$max6b = $details["6b"];
 
-    $uID = strip_tags(trim($_POST['user']));
-    $whichEntry = strip_tags(trim($_POST['whichEntry']));
-   $newEntry = strip_tags(trim($_POST['newEntry']));
+if(isset($_POST['submit'])) {
+
+  $uID = strip_tags(trim($_POST['user']));
+  $whichEntry = strip_tags(trim($_POST['whichEntry']));
+  $newEntry = strip_tags(trim($_POST['newEntry']));
 
   $query = "UPDATE users SET " . $whichEntry . "='" . $newEntry . "' WHERE userId=" . $uID;
-    $res = mysql_query($query);
+  $res = mysql_query($query);
 
-    if ($res){
-      echo "Successfully updated.";
-    }else{
-      echo mysql_error();
-    }
- }
-   ?>
+  if ($res){
+    echo "Successfully updated.";
+  }else{
+    echo mysql_error();
+  }
+}
+?>
 <html>
 
 <head>
@@ -83,7 +86,7 @@ $max6b = 30;
     font-size: 50px !important;
     color: red;
   }
-  table, tr, td{
+  td{
     border: 1px solid black;
   }
   table{
@@ -220,21 +223,21 @@ $max6b = 30;
 <form id="sos" method="post">
     <select id="user" name="user">
         <option value="" disabled selected>Select Student</option>
-        <?php
-        $query = "SELECT userId, userFName, userLName, userSchool, userWorkshop1, userWorkshop2 FROM users";
+<?php
+$query = "SELECT userId, userFName, userLName, userSchool, userWorkshop1, userWorkshop2 FROM users";
 
-        $res = mysql_query($query);
+$res = mysql_query($query);
 
-        while ($results = mysql_fetch_array($res, MYSQL_ASSOC)) {
-          $data[] = $results;
-        }
+while ($results = mysql_fetch_array($res, MYSQL_ASSOC)) {
+  $data[] = $results;
+}
 
-        foreach ($data as $entry){
-          echo "<option value='" . $entry["userId"] . "'>" . $entry["userId"] . " " . $entry["userFName"] . " " . $entry["userLName"] . " " . $entry["userSchool"] . " " . $entry["userWorkshop1"] . " " . $entry["userWorkshop2"] . "</option>";
-        }
-        mysql_free_result($res);
+foreach ($data as $entry){
+  echo "<option value='" . $entry["userId"] . "'>" . $entry["userId"] . " " . $entry["userFName"] . " " . $entry["userLName"] . " " . $entry["userSchool"] . " " . $entry["userWorkshop1"] . " " . $entry["userWorkshop2"] . "</option>";
+}
+mysql_free_result($res);
 
-         ?>
+?>
     </select>
     <br><br>What do you want to update? <br>
     <select id="whichEntry" name="whichEntry">

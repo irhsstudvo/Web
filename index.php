@@ -39,13 +39,13 @@ $count5b = mysql_num_rows($result5b);
 $result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
 $count6b = mysql_num_rows($result6b);
 
-$max1 = 100;
+$max1 = 120;
 $max2 = 80;
 $max3 = 30;
 $max4 = 40;
-$max5 = 50;
+$max5 = 30;
 $max6 = 25;
-$max1b = 50;
+$max1b = 100;
 $max2b = 80;
 $max3b = 25;
 $max4b = 30;
@@ -54,60 +54,60 @@ $max6b = 30;
 
 if(isset($_POST['submit'])) {
 
- $email = strip_tags(trim($_POST['email']));
- $fname = strip_tags(trim($_POST['firstname']));
- $lname = strip_tags(trim($_POST['lastname']));
- $school = strip_tags(trim($_POST['school']));
- $teacher = strip_tags(trim($_POST['teacher']));
- $medInfo = strip_tags(trim($_POST['medInfo']));
- $emgContact = strip_tags(trim($_POST['emgContact']));
- $emgPhone = strip_tags(trim($_POST['emgPhone']));
- $learnQ = strip_tags(trim($_POST['learnQ']));
- $w1 = strip_tags(trim($_POST['work1']));
- $w2 = strip_tags(trim($_POST['work2']));
+  $email = strip_tags(trim($_POST['email']));
+  $fname = strip_tags(trim($_POST['firstname']));
+  $lname = strip_tags(trim($_POST['lastname']));
+  $school = strip_tags(trim($_POST['school']));
+  $teacher = strip_tags(trim($_POST['teacher']));
+  $medInfo = strip_tags(trim($_POST['medInfo']));
+  $emgContact = strip_tags(trim($_POST['emgContact']));
+  $emgPhone = strip_tags(trim($_POST['emgPhone']));
+  $learnQ = strip_tags(trim($_POST['learnQ']));
+  $w1 = strip_tags(trim($_POST['work1']));
+  $w2 = strip_tags(trim($_POST['work2']));
 
- $lunch = $_POST['lunch'];
- $gender = $_POST['gender'];
+  $lunch = $_POST['lunch'];
+  $gender = $_POST['gender'];
 
- if ($medInfo == ""){
-   $medInfo = "None";
- }
- $error = false;
+  if ($medInfo == ""){
+    $medInfo = "None";
+  }
+  $error = false;
 
- if (empty($email) || empty($fname) || empty($lname)|| empty($teacher) || empty($school) || empty($emgContact) || empty($lunch) || empty($emgPhone) || empty($learnQ) || empty($gender) || empty($w1) || empty($w2)){
-   $error = true;
-   $errorCode = 1;
- }
+  if (empty($email) || empty($fname) || empty($lname)|| empty($teacher) || empty($school) || empty($emgContact) || empty($emgPhone) || empty($learnQ) || empty($gender) || empty($w1) || empty($w2)){
+    $error = true;
+    $errorCode = 1;
+  }
 
-if (!$error) {
-   $fname = str_replace("'", "''", "$fname");
-   $fname = str_replace("\n", "", "$fname");
+  if (!$error) {
+    $fname = str_replace("'", "''", "$fname");
+    $fname = str_replace("\n", "", "$fname");
 
-   $lname = str_replace("'", "''", "$lname");
-   $lname = str_replace("\n", "", "$lname");
+    $lname = str_replace("'", "''", "$lname");
+    $lname = str_replace("\n", "", "$lname");
 
-   $email = str_replace("'", "''", "$email");
-   $email = str_replace("\n", "", "$email");
+    $email = str_replace("'", "''", "$email");
+    $email = str_replace("\n", "", "$email");
 
-   $school = str_replace("'", "''", "$school");
-   $school = str_replace("\n", "", "$school");
+    $school = str_replace("'", "''", "$school");
+    $school = str_replace("\n", "", "$school");
 
-      $teacher = str_replace("'", "''", "$teacher");
-      $teacher = str_replace("\n", "", "$teacher");
+    $teacher = str_replace("'", "''", "$teacher");
+    $teacher = str_replace("\n", "", "$teacher");
 
-   $medInfo = str_replace("'", "''", "$medInfo");
-   $medInfo = str_replace("\n", "", "$medInfo");
+    $medInfo = str_replace("'", "''", "$medInfo");
+    $medInfo = str_replace("\n", "", "$medInfo");
 
-   $emgContact = str_replace("'", "''", "$emgContact");
-   $emgContact = str_replace("\n", "", "$emgContact");
+    $emgContact = str_replace("'", "''", "$emgContact");
+    $emgContact = str_replace("\n", "", "$emgContact");
 
-   $emgPhone = str_replace("'", "''", "$emgPhone");
-   $emgPhone = str_replace("\n", "", "$emgPhone");
+    $emgPhone = str_replace("'", "''", "$emgPhone");
+    $emgPhone = str_replace("\n", "", "$emgPhone");
 
-   $learnQ = str_replace("'", "''", "$learnQ");
-   $learnQ = str_replace("\n", "", "$learnQ");
+    $learnQ = str_replace("'", "''", "$learnQ");
+    $learnQ = str_replace("\n", "", "$learnQ");
 
-   $lunch = ($lunch == "Y");
+    $lunch = false;
 
     $query = "INSERT INTO users(userFName, userLName, userEmail, userSchool, userTeacher, userGender, userMedInfo, userEmgName, userEmgNum, lunch, userWorkshop1, userWorkshop2, userQResponse) VALUES('$fname', '$lname', '$email', '$school', '$teacher', '$gender', '$medInfo', '$emgContact', '$emgPhone', '$lunch', '$w1', '$w2', '$learnQ')";
     $res = mysql_query($query);
@@ -115,7 +115,7 @@ if (!$error) {
     if ($res) {
       $errorCode = 0;
     }
-}
+  }
   header("Location: https://bridgeday.000webhostapp.com?error=".$errorCode."#regThing");
 
 }
@@ -202,7 +202,7 @@ if (!$error) {
                     <br>$8.00 payable by cheque made out to "Iroquois Ridge High School"
                     <br>
                     <br>
-                    <span style="color: red">* You must inform your homeroom teacher of your lunch choice</span></div>
+                    <span style="color: red">The cafeteria lunch is now sold out.</span></div>
 
                 <hr width="50%">
 
@@ -294,7 +294,7 @@ if (!$error) {
                 <div class="mdl-grid mdl-container">
                     <div class="mdl-cell mdl-cell--4-col" id="A1">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">Make it or Break It? - Halton Women's Place</div>
+                            <div class="workTitle">Make it or Break It? - HWP</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max1 - $count1; ?> </span>
                                 <br>
@@ -367,7 +367,7 @@ if (!$error) {
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col" id="B1">
                         <div class="mdl-card-square mdl-card mdl-shadow--4dp">
-                            <div class="workTitle">Mirror Mirror - Halton Women's Place</div>
+                            <div class="workTitle">Mirror Mirror - HWP</div>
                             <div class="spots"><span class="num">
                                 <?php echo $max1b - $count1b; ?> </span>
                                 <br>
@@ -477,22 +477,6 @@ if (!$error) {
 
                     </br>
                     </br>
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="demo-show-toast">
-                        <input type="radio" id="demo-show-toast" class="mdl-radio__button" name="lunch" value="Y">
-                        <span class="mdl-radio__label">Cafeteria Option</span>
-                    </label>
-
-                    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
-                        <div class="mdl-snackbar__text">Test</div>
-                        <button class="mdl-snackbar__action" type="button"></button>
-                    </div>
-
-                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                        <input type="radio" id="option-2" class="mdl-radio__button" name="lunch" value="N">
-                        <span class="mdl-radio__label">Bringing Own Lunch</span>
-                    </label>
-                    <br>
-                    <br>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" id="medInfo" name="medInfo">
@@ -545,24 +529,24 @@ if (!$error) {
 
                     <select id="work1" name="work1" class="select-style">
                         <option value="" disabled selected>"Relationships" Workshop Choice</option>
-                        <?php if ($count1 < $max1){
-                echo "<option value='A1'>Make it or Break It? - Halton Women's Place</option>";
-              }
-                if ($count2 < $max2) {
-                echo "<<option value='A2'>Resisting Toxic Media - SAVIS</option>";
-              }
-                if ($count3 < $max3) {
-                echo "<<option value='A3'>Live, Learn, Laugh - Kimberley Menezes-Francispillai</option>";
-              }
-                if ($count4 < $max4) {
-                echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Heman Madan</option>";
-                }
-                if ($count5 < $max5) {
-                echo "<<option value='A5'>Q&amp;A - Ron Duberstein</option>";
-                }
-                if ($count6 < $max6) {
-                echo "<<option value='A6'>Stereotypes in High School - GEM</option>";
-                } ?>
+<?php if ($count1 < $max1){
+echo "<option value='A1'>Make it or Break It? - HWP</option>";
+}
+if ($count2 < $max2) {
+  echo "<<option value='A2'>Resisting Toxic Media - SAVIS</option>";
+}
+if ($count3 < $max3) {
+  echo "<<option value='A3'>Live, Learn, Laugh - Kimberley Menezes-Francispillai</option>";
+}
+if ($count4 < $max4) {
+  echo "<<option value='A4'>Balancing Relationships - Betty Xiong, Heman Madan</option>";
+}
+if ($count5 < $max5) {
+  echo "<<option value='A5'>Q&amp;A - Ron Duberstein</option>";
+}
+if ($count6 < $max6) {
+  echo "<<option value='A6'>Stereotypes in High School - GEM</option>";
+} ?>
                     </select>
 
                     <br/>
@@ -570,24 +554,24 @@ if (!$error) {
 
                     <select id="work2" name="work2" class="select-style">
                         <option value="" disabled selected>"Resiliency" Workshop Choice</option>
-                        <?php if ($count1b < $max1b){
-                              echo "<option value='B1'>Mirror Mirror - Halton Women's Place</option>";
-                              }
-                              if ($count2b < $max2b){
-                              echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
-                              }
-                              if ($count3b < $max3b){
-                              echo "<option value='B3'>Music As Medicine For Mental Health - Joob Vailiki</option>";
-                              }
-                              if ($count4b < $max4b){
-                              echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
-                              }
-                              if ($count5b < $max5b){
-                              echo "<option value='B5'>Resolution: Confidence - Jenn Patterson</option>";
-                              }
-                              if ($count6b < $max6b){
-                              echo "<option value='B6'>The Daring Way - Melissa Vance</option>";
-                            } ?>
+<?php if ($count1b < $max1b){
+echo "<option value='B1'>Mirror Mirror - HWP</option>";
+  }
+if ($count2b < $max2b){
+  echo "<option value='B2'>Mental Health at The Ridge - Wellness Team</option>";
+}
+if ($count3b < $max3b){
+  echo "<option value='B3'>Music As Medicine For Mental Health - Joob Vailiki</option>";
+}
+if ($count4b < $max4b){
+  echo "<option value='B4'>Break down the Roles - Red Cross Youth Facilitators</option>";
+}
+if ($count5b < $max5b){
+  echo "<option value='B5'>Resolution: Confidence - Jenn Patterson</option>";
+}
+if ($count6b < $max6b){
+  echo "<option value='B6'>The Daring Way - Melissa Vance</option>";
+} ?>
                     </select>
 
                     </br>
@@ -613,16 +597,16 @@ if (!$error) {
 
         <script src="js/main.js" type="text/javascript"></script>
 
-        <script>
-            (function() {
-                'use strict';
-                window['counter'] = 0;
-                var snackbarContainer = document.querySelector('#demo-toast-example');
-                var showToastButton = document.querySelector('#demo-show-toast');
-                showToastButton.addEventListener('click', function() {
-                    'use strict';
-                    var data = {
-                        message: '$8 paid by cheque to "Iroquois Ridge High School" for cafeteria option'
+  <script>
+  (function() {
+    'use strict';
+    window['counter'] = 0;
+    var snackbarContainer = document.querySelector('#demo-toast-example');
+    var showToastButton = document.querySelector('#demo-show-toast');
+    showToastButton.addEventListener('click', function() {
+      'use strict';
+      var data = {
+      message: '$8 paid by cheque to "Iroquois Ridge High School" for cafeteria option'
                     };
                     snackbarContainer.MaterialSnackbar.showSnackbar(data);
                 });
