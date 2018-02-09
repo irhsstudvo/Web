@@ -3,41 +3,41 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
-$result1 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A1'");
-$count1 = mysql_num_rows($result1);
+$result1 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A1'");
+$count1 = sqlite_num_rows($result1);
 
-$result2 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A2'");
-$count2= mysql_num_rows($result2);
+$result2 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A2'");
+$count2= sqlite_num_rows($result2);
 
-$result3 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A3'");
-$count3 = mysql_num_rows($result3);
+$result3 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A3'");
+$count3 = sqlite_num_rows($result3);
 
-$result4 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A4'");
-$count4 = mysql_num_rows($result4);
+$result4 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A4'");
+$count4 = sqlite_num_rows($result4);
 
-$result5 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A5'");
-$count5 = mysql_num_rows($result5);
+$result5 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A5'");
+$count5 = sqlite_num_rows($result5);
 
-$result6 = mysql_query("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A6'");
-$count6 = mysql_num_rows($result6);
+$result6 = sqlite_quert("SELECT userWorkshop1 FROM users WHERE userWorkshop1='A6'");
+$count6 = sqlite_num_rows($result6);
 
-$result1b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B1'");
-$count1b = mysql_num_rows($result1b);
+$result1b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B1'");
+$count1b = sqlite_num_rows($result1b);
 
-$result2b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B2'");
-$count2b= mysql_num_rows($result2b);
+$result2b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B2'");
+$count2b= sqlite_num_rows($result2b);
 
-$result3b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B3'");
-$count3b = mysql_num_rows($result3b);
+$result3b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B3'");
+$count3b = sqlite_num_rows($result3b);
 
-$result4b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B4'");
-$count4b = mysql_num_rows($result4b);
+$result4b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B4'");
+$count4b = sqlite_num_rows($result4b);
 
-$result5b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B5'");
-$count5b = mysql_num_rows($result5b);
+$result5b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B5'");
+$count5b = sqlite_num_rows($result5b);
 
-$result6b = mysql_query("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
-$count6b = mysql_num_rows($result6b);
+$result6b = sqlite_quert("SELECT userWorkshop2 FROM users WHERE userWorkshop2='B6'");
+$count6b = sqlite_num_rows($result6b);
 
 $max1 = 120;
 $max2 = 80;
