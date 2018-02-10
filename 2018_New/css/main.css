@@ -1,0 +1,268 @@
+::selection {
+    background: #FF9A9A !important;
+    /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #FF9A9A !important;
+    /* Gecko Browsers */
+}
+#fadeBG {
+    opacity: 0.5;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://bridgeday.000webhostapp.com/img/bridgeTeam.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*'*/
+
+body, html {
+    margin: 0 !important;
+}
+.second {
+    position: relative;
+    text-align: right;
+    overflow: auto;
+}
+.second, .third {
+    background-color: white;
+    font-family: "helvetica";
+    text-align: justify;
+}
+.fadeIn {
+    opacity: 0;
+}
+.transition {
+    height: 50vh !important;
+}
+.second {
+    margin-top: 100vh;
+}
+.overlay {
+    z-index: -90;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)) no-repeat center center fixed;
+}
+.title {
+    color: white;
+    line-height: 1em;
+    font-size: 100px;
+    text-align: center;
+    font-family: "helvetica";
+    font-weight: 600;
+    position: absolute;
+    height: 10vh;
+    top: 40vh;
+    width: 100%;
+    margin: auto;
+}
+.dateText {
+    color: red;
+    font-size: 40px;
+}
+#downArrowWrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#downArrowWrapper:hover {
+    cursor: pointer;
+}
+#downArrow {
+    width: 64px;
+    height: 64px;
+}
+.subTitle {
+    font-weight: 600;
+    line-height: 1em;
+    padding-top: 7.5vh;
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    position: relative;
+}
+#errorMSG {
+    padding-top: 5vh;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: -5vh;
+}
+#reg {
+    padding-bottom: 5vh;
+    margin-bottom: -5vh;
+}
+.select-style {
+    position: relative;
+    font-size: 20px;
+    -webkit-appearance: menulist-button;
+    height: 35px;
+    width: 600px;
+    font-family: "helvetica", sans-serif;;
+}
+.mdl-textfield, .mdl-radio {
+    margin-right: 2.5% !important;
+    margin-left: 2.5% !important;
+    font-size: 20px !important;
+}
+figcaption {
+    font-size: 25px;
+    color: white;
+    font-family: "helvetica";
+}
+thead tr td {
+    background-color: #FF9A9A;
+    font-weight: bold;
+}
+.mdl-textfield__label {
+    font-size: 20px !important;
+}
+#irhsImg {
+    margin-top: 20px;
+    width: 50%;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+.blurb {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 40px;
+    line-height: 1em;
+    font-size: 25px;
+    text-align: left;
+}
+.hs101Disclaimer {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    line-height: 1em;
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+.titleThing {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1em;
+    color: red;
+    font-weight: bold;
+}
+.workTitle {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: -10px;
+    font-size: 22px;
+    height: 37.5px;
+    line-height: 1.2em;
+}
+.mdl-card-square:hover {
+    cursor: pointer;
+}
+.spots {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+.fancyWorkTitle {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.num {
+    font-size: 60px;
+    font-weight: bold;
+}
+.workDesc {
+    font-size: 18px;
+    padding: 10px;
+}
+.readMore{
+  color: red;
+}
+
+#reg > div:nth-child(22){
+  width: 375px !important;
+}
+
+#sched {
+    margin-top: 35px;
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 80%;
+}
+td {
+    border: 1px solid black;
+}
+thead tr td {
+    font-weight: bold;
+}
+
+/* Mobile CSS */
+@media screen and (max-width: 700px) {
+    .fullscreen-bg {
+        background: none;
+    }
+    .fullscreen-bg__video {
+        display: none;
+    }
+    .transition{
+      display: none;
+    }
+    .subTitle {
+        font-size: 30px !important;
+    }
+    .title {
+        font-size: 60px !important;
+        top: 35vh !important;
+    }
+    .dateText {
+        font-size: 30px !important;
+    }
+    .select-style {
+        width: 90% !important;
+    }
+    #sched{
+      font-size: 15px !important;
+    }
+    #sched tr td{
+      padding: 7;
+    }
+}
