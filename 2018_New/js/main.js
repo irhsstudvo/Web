@@ -96,16 +96,16 @@ $(document).on("ready", function() {
     // workshops json ordered by code with title and description
     var workshops = {
         "A1": {
-            "title": "Make it or Break It? - HWP",
-            "description": "Discussion around the common things that cause conflict in relationships - such as communication (texting too much or not enough), jealousy, trust, etc. We provide scenarios and ask students to determine what is missing from the relationship and how would they would fix it - as well as to decide on a personal level whether they would choose to fix it or not (letting them know it's also good to not be in a relationship!)"
+            "title": "A Week of Wellness - Wellness Team",
+            "description": "Does coming to high school sound stressful to you? Come to the week of wellness workshop to learn some of the ways to relieve stress and handle the heavy workload that comes with being in high school. Join us for a short run through of something we like to do at the Ridge called \"A Week of Wellness\" where we dive into ways to cope with stress."
         },
         "A2": {
-            "title": "Resisting Toxic Media - SAVIS",
-            "description": "Gender, body, image and relationships. This workshop examines gender steotypes and their impact on self image. We will explore how this affects our relationship with ourselves and others. We will also explain how you can push back against toxic media messages."
+            "title": "Sit Back and Relax - Wellness Team",
+            "description": "Do you want to meet cute dogs and learn ways to relax? Learn some of the ways to use various tasks to relieve stress such as colouring, meditation and therapy dogs!"
         },
         "A3": {
-            "title": "Live, Learn, Laugh - Kimberley Menezes-Francispilla",
-            "description": "The transition to high school is a journey of entering into the young adult phase of one's life. This interactive workshop will help you: a) Understand more about how teens cope and provide some tools for coping b) Look at ways to develop healthy relationships. c) Address common worries that students experience when entering high school and how to change those worries into solvable issues."
+            "title": "Groove Your Way to Wellness - Athletic Council",
+            "description": "Destress with Zumba! Come to this fun and active workshop that allows you to get up and move. Incoporating wellness into active living through Zumba! Come out, get up and dance it out."
         },
         "A4": {
             "title": "Balancing Relationships - Betty Xiong, Heman Madan",
