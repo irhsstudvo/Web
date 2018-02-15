@@ -149,8 +149,9 @@ figcaption {
     font-family: "helvetica";
 }
 thead tr td {
-    background-color: #FF9A9A;
+    background-color: red;
     font-weight: bold;
+    color: white;
 }
 .mdl-textfield__label {
     font-size: 20px !important;
