@@ -165,7 +165,8 @@ thead tr td {
 .blurb {
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 40px;
+    padding-top: 10px;
+	padding-bottom: 10px;
     line-height: 1em;
     font-size: 25px;
     text-align: left;
